@@ -1,7 +1,7 @@
 {
-  "name": "jobly-solution",
+  "name": "jobly-express-API",
   "version": "2.0.0",
-  "description": "",
+  "description": "A job searching API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -25,7 +25,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonschema": "^1.2.6",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
     "pg": "^8.3.0"
   },
