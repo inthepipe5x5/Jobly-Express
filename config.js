@@ -9,7 +9,7 @@ const SECRET_KEY = process.env.SECRET_KEY || "secret-dev";
 
 const PORT = +process.env.PORT || 3001;
 const HOST = +process.env.HOST || "127.0.0.1";
-const DB_HOST = process.env.DB_PORT || 5432
+const DB_PORT = process.env.DB_PORT || 5432
 const DB_USERNAME = process.env.DATABASE_USERNAME
 const DB_PW = process.env.DATABASE_PW
 
