@@ -6,7 +6,7 @@ const jsonschema = require("jsonschema");
 const express = require("express");
 
 const { BadRequestError, ExpressError } = require("../expressError");
-const { ensureLoggedIn } = require("../middleware/auth");
+const { ensureLoggedIn, requireAdmin } = require("../middleware/auth");
 const {validateQStrReq} = require("../middleware/filter")
 const Company = require("../models/company");
 
@@ -24,7 +24,7 @@ const router = new express.Router();
  * Authorization required: login
  */
 
-router.post("/", ensureLoggedIn, async function (req, res, next) {
+router.post("/", ensureLoggedIn, requireAdmin, async function (req, res, next) {
   try {
     const validator = jsonschema.validate(req.body, companyNewSchema);
     if (!validator.valid) {
@@ -76,8 +76,9 @@ router.get("/:handle", async function (req, res, next) {
   }
 });
 
-/** GET /[name, minEmployees, maxEmployees]  =>  { company }
+/** 
  *  Filter companies by one or all of the following query string parameters
+ *  GET /[name, minEmployees, maxEmployees]  =>  [{ company }, { company }, { company }]
  *
  *  Company is { handle, name, description, numEmployees, logoUrl, jobs }
  *   where jobs is [{ id, title, salary, equity }, ...]
@@ -87,9 +88,7 @@ router.get("/:handle", async function (req, res, next) {
 
 router.get("/search", validateQStrReq, async function (req, res, next) {
   try {
-    
-
-    const company = await Company.get(req.params.handle);
+    const company = await Company.find(req.searchQuery);
     return res.json({ company });
   } catch (err) {
     return next(err);
@@ -107,7 +106,7 @@ router.get("/search", validateQStrReq, async function (req, res, next) {
  * Authorization required: login
  */
 
-router.patch("/:handle", ensureLoggedIn, async function (req, res, next) {
+router.patch("/:handle", ensureLoggedIn, requireAdmin, async function (req, res, next) {
   try {
     const validator = jsonschema.validate(req.body, companyUpdateSchema);
     if (!validator.valid) {
@@ -127,7 +126,7 @@ router.patch("/:handle", ensureLoggedIn, async function (req, res, next) {
  * Authorization: login
  */
 
-router.delete("/:handle", ensureLoggedIn, async function (req, res, next) {
+router.delete("/:handle", ensureLoggedIn, requireAdmin, async function (req, res, next) {
   try {
     await Company.remove(req.params.handle);
     return res.json({ deleted: req.params.handle });
