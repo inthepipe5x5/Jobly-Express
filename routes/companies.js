@@ -39,6 +39,25 @@ router.post("/", ensureLoggedIn, requireAdmin, async function (req, res, next) {
   }
 });
 
+/** 
+ *  Filter companies by one or all of the following query string parameters
+ *  GET /[name, minEmployees, maxEmployees]  =>  [{ company }, { company }, { company }]
+ *
+ *  Company is { handle, name, description, numEmployees, logoUrl, jobs }
+ *   where jobs is [{ id, title, salary, equity }, ...]
+ *
+ * Authorization required: none
+ */
+
+router.get("/search", validateQStrReq, async function (req, res, next) {
+  try {
+    const companies = await Company.find(req.searchQuery);
+    return res.json({ companies });
+  } catch (err) {
+    return next(err);
+  }
+});
+
 /** GET /  =>
  *   { companies: [ { handle, name, description, numEmployees, logoUrl }, ...] }
  *
@@ -59,6 +78,7 @@ router.get("/", async function (req, res, next) {
   }
 });
 
+
 /** GET /[handle]  =>  { company }
  *
  *  Company is { handle, name, description, numEmployees, logoUrl, jobs }
@@ -70,25 +90,6 @@ router.get("/", async function (req, res, next) {
 router.get("/:handle", async function (req, res, next) {
   try {
     const company = await Company.get(req.params.handle);
-    return res.json({ company });
-  } catch (err) {
-    return next(err);
-  }
-});
-
-/** 
- *  Filter companies by one or all of the following query string parameters
- *  GET /[name, minEmployees, maxEmployees]  =>  [{ company }, { company }, { company }]
- *
- *  Company is { handle, name, description, numEmployees, logoUrl, jobs }
- *   where jobs is [{ id, title, salary, equity }, ...]
- *
- * Authorization required: none
- */
-
-router.get("/search", validateQStrReq, async function (req, res, next) {
-  try {
-    const company = await Company.find(req.searchQuery);
     return res.json({ company });
   } catch (err) {
     return next(err);

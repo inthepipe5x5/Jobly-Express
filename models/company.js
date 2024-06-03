@@ -124,7 +124,6 @@ class Company {
 
   static async find(searchQuery) {
     const { name, minEmployees, maxEmployees } = searchQuery || {};
-    const queryParams = [];
 
     // Build the WHERE clause dynamically
     const whereClauses = [];
@@ -133,22 +132,18 @@ class Company {
     if (name) {
       whereClauses.push("name ILIKE $1");
       values.push(`%${name}%`);
-      queryParams.push(values.length);
     }
 
     if (minEmployees) {
       whereClauses.push("num_employees >= $" + (values.length + 1));
       values.push(minEmployees);
-      queryParams.push(values.length);
     }
 
     if (maxEmployees) {
       whereClauses.push("num_employees <= $" + (values.length + 1));
       values.push(maxEmployees);
-      queryParams.push(values.length);
     }
 
-    console.log(whereClauses, values, queryParams);
     const whereClause =
       whereClauses.length > 0 ? `WHERE ${whereClauses.join(" AND ")}` : "";
 

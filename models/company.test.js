@@ -188,6 +188,30 @@ describe("Company.find static function test", () => {
     ]);
   });
 
+  test("should return companies matching multiple search criteria", async () => {
+    const companies = await Company.find({
+      name: "C",
+      maxEmployees: 2,
+    });
+    expect(companies).toHaveLength(2);
+    expect(companies).toEqual([
+      {
+        description: "Desc1",
+        handle: "c1",
+        logoUrl: "http://c1.img",
+        name: "C1",
+        numEmployees: 1,
+      },
+      {
+        description: "Desc2",
+        handle: "c2",
+        logoUrl: "http://c2.img",
+        name: "C2",
+        numEmployees: 2,
+      },
+    ]);
+  });
+
   test("should throw NotFoundError when no companies match the search criteria", async () => {
     await expect(
       Company.find({ name: "Nonexistent", minEmployees: 10 })

@@ -152,6 +152,137 @@ describe("GET /companies/:handle", function () {
     expect(resp.statusCode).toEqual(404);
   });
 });
+/************************************** GET /companies/search */
+describe("GET /companies/search", function () {
+  test("anon => finds companies with valid query strings", async function () {
+    const resp = await request(app)
+      .get("/companies/search")
+      .query({ name: "C", minEmployees: 0, maxEmployees: 10 });
+
+    expect(resp.statusCode).toEqual(200);
+    expect(resp.body.companies).toHaveLength(3);
+    expect(resp.body).toEqual({
+      companies: [
+        {
+          handle: "c1",
+          name: "C1",
+          description: "Desc1",
+          numEmployees: 1,
+          logoUrl: "http://c1.img",
+        },
+        {
+          handle: "c2",
+          name: "C2",
+          description: "Desc2",
+          numEmployees: 2,
+          logoUrl: "http://c2.img",
+        },
+        {
+          handle: "c3",
+          name: "C3",
+          description: "Desc3",
+          numEmployees: 3,
+          logoUrl: "http://c3.img",
+        },
+      ],
+    });
+  });
+
+  test("u1 user => (no auth errors) finds companies with valid query strings", async function () {
+    const resp = await request(app)
+      .get("/companies/search")
+      .query({ name: "C", minEmployees: 0, maxEmployees: 10 })
+      .set("authorization", `Bearer ${u1Token}`);
+
+    expect(resp.statusCode).toEqual(200);
+    expect(resp.body).toEqual({
+      companies: [
+        {
+          handle: "c1",
+          name: "C1",
+          description: "Desc1",
+          numEmployees: 1,
+          logoUrl: "http://c1.img",
+        },
+        {
+          handle: "c2",
+          name: "C2",
+          description: "Desc2",
+          numEmployees: 2,
+          logoUrl: "http://c2.img",
+        },
+        {
+          handle: "c3",
+          name: "C3",
+          description: "Desc3",
+          numEmployees: 3,
+          logoUrl: "http://c3.img",
+        },
+      ],
+    });
+  });
+
+  test("anon => finds companies with only 2 valid total query strings", async function () {
+    const resp = await request(app)
+      .get("/companies/search")
+      .query({ minEmployees: 0, maxEmployees: 10 });
+
+    expect(resp.statusCode).toEqual(200);
+    expect(resp.body).toEqual({
+      companies: [
+        {
+          handle: "c1",
+          name: "C1",
+          description: "Desc1",
+          numEmployees: 1,
+          logoUrl: "http://c1.img",
+        },
+        {
+          handle: "c2",
+          name: "C2",
+          description: "Desc2",
+          numEmployees: 2,
+          logoUrl: "http://c2.img",
+        },
+        {
+          handle: "c3",
+          name: "C3",
+          description: "Desc3",
+          numEmployees: 3,
+          logoUrl: "http://c3.img",
+        },
+      ],
+    });
+  });
+
+  test("anon => finds companies with 2 valid query total strings", async function () {
+    const resp = await request(app)
+      .get("/companies/search")
+      .query({ name: "C", maxEmployees: 2 });
+
+      expect(resp.body).toEqual({
+        companies: [
+          {
+            handle: "c1",
+            name: "C1",
+            description: "Desc1",
+            numEmployees: 1,
+            logoUrl: "http://c1.img",
+          },
+          {
+            handle: "c2",
+            name: "C2",
+            description: "Desc2",
+            numEmployees: 2,
+            logoUrl: "http://c2.img",
+          },
+        ],
+      });
+      expect(resp.statusCode).toEqual(200);
+      expect(resp.body.companies).toHaveLength(2);
+  });
+});
+
 
 /************************************** PATCH /companies/:handle */
 
@@ -207,7 +338,7 @@ describe("PATCH /companies/:handle", function () {
     expect(resp.statusCode).toEqual(401);
     expect(resp.body).toEqual({
       error: { message: "Unauthorized", status: 401 },
-    })
+    });
   });
 
   test("Part 3 - Admin gets `404 not found` on no such company", async function () {
@@ -310,5 +441,5 @@ describe("DELETE /companies/:handle", function () {
         .set("authorization", `Bearer ${u2Token}`);
       expect(resp.statusCode).toEqual(404);
     });
-  });  
+  });
 });
