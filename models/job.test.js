@@ -90,7 +90,7 @@ describe("findAll", function () {
 /************************************** find */
 describe("Job.find static function test", () => {
   test("works:  filter title", async function () {
-    let jobs = await Job.find({ title: "2" });
+    let jobs = await Job.find({ title: "1" });
     expect(jobs).toEqual([testJob]);
   });
 

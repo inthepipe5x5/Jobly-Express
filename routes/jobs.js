@@ -21,7 +21,6 @@ const router = new express.Router();
  *
  * Authorization required: login, admin
  */
-
 router.post("/", ensureLoggedIn, requireAdmin, async function (req, res, next) {
   try {
     const validator = jsonschema.validate(req.body, jobNewSchema);
@@ -33,17 +32,16 @@ router.post("/", ensureLoggedIn, requireAdmin, async function (req, res, next) {
     const job = await Job.create(req.body);
     return res.status(201).json({ job });
   } catch (err) {
-    //set err.status to 400 if BadRequestError
+    console.error("Caught error:", err); // Add this line for debugging
+
     if (err instanceof BadRequestError) {
-      err.status = 400;
-      return next(err);
+      return res.status(400).json({ error: err.message });
     } else {
-      //throw to global error handler
+      // Delegate to global error handler if it's not a BadRequestError
       return next(err);
     }
   }
 });
-
 /**
  *  Filter jobs by one or all of the following query string parameters
  *  GET /search => [{ job }, { job }, { job }]
@@ -71,6 +69,7 @@ router.get("/search", validateQStrReq, async function (req, res, next) {
 router.get("/", async function (req, res, next) {
   try {
     const jobs = await Job.findAll();
+    if (!jobs) throw new NotFoundError();
     return res.json({ jobs });
   } catch (err) {
     return next(err);
@@ -87,6 +86,7 @@ router.get("/", async function (req, res, next) {
 router.get("/:id", async function (req, res, next) {
   try {
     const job = await Job.get(req.params.id);
+    if (!job) throw new NotFoundError();
     return res.json({ job });
   } catch (err) {
     return next(err);

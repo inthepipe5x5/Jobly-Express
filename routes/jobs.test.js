@@ -112,7 +112,7 @@ describe("POST /jobs", function () {
       .send({
         ...newJob,
         salary: -100,
-        equity: 2.0,
+        equity: 2.0,i
       })
       .set("authorization", `Bearer ${u2Token}`);
     expect(resp.statusCode).toEqual(400);
