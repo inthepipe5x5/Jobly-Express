@@ -33,7 +33,7 @@ describe("create", function () {
     title: "new job",
     salary: 50000,
     companyHandle: "c2",
-    equity: "0.1",
+    equity: 0.1,
   };
 
   test("works", async function () {
@@ -59,21 +59,21 @@ describe("findAll", function () {
         id: expect.any(Number),
         title: "job_1",
         salary: 100000,
-        equity: "0.1",
+        equity: 0.1,
         companyHandle: "c1",
       },
       {
         id: expect.any(Number),
         title: "job_2",
         salary: 200000,
-        equity: "0.2",
+        equity: 0.2,
         companyHandle: "c2",
       },
       {
         id: expect.any(Number),
         title: "job_3",
         salary: 300000,
-        equity: "0.3",
+        equity: 0.3,
         companyHandle: "c3",
       },
       {
@@ -101,21 +101,21 @@ describe("Job.find static function test", () => {
         id: expect.any(Number),
         title: "job_1",
         salary: 100000,
-        equity: "0.1",
+        equity: 0.1,
         companyHandle: "c1",
       },
       {
         id: expect.any(Number),
         title: "job_2",
         salary: 200000,
-        equity: "0.2",
+        equity: 0.2,
         companyHandle: "c2",
       },
       {
         id: expect.any(Number),
         title: "job_3",
         salary: 300000,
-        equity: "0.3",
+        equity: 0.3,
         companyHandle: "c3",
       },
     ]);
@@ -128,21 +128,21 @@ describe("Job.find static function test", () => {
         id: expect.any(Number),
         title: "job_1",
         salary: 100000,
-        equity: "0.1",
+        equity: 0.1,
         companyHandle: "c1",
       },
       {
         id: expect.any(Number),
         title: "job_2",
         salary: 200000,
-        equity: "0.2",
+        equity: 0.2,
         companyHandle: "c2",
       },
       {
         id: expect.any(Number),
         title: "job_3",
         salary: 300000,
-        equity: "0.3",
+        equity: 0.3,
         companyHandle: "c3",
       },
     ]);
@@ -158,7 +158,7 @@ describe("get", function () {
       id: testJob.id,
       title: "job_1",
       salary: 100000,
-      equity: "0.1",
+      equity: 0.1,
       companyHandle: "c1",
     });
   });
