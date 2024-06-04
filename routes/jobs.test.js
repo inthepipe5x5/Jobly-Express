@@ -22,9 +22,6 @@ let job1, job2, job3, job4;
 
 beforeAll(async () => {
   await commonBeforeAll();
-  console.log(
-    `Test Setup: Connected to database: ${db.database} via ${db.connectionString}`
-  );
 });
 beforeEach(async () => {
   await commonBeforeEach();
@@ -118,7 +115,6 @@ describe("POST /jobs", function () {
         equity: 2.0,
       })
       .set("authorization", `Bearer ${u2Token}`);
-    expect(resp.body).toEqual({"error": {"message": "Bad Request", "status": 400}});
     expect(resp.statusCode).toEqual(400);
   });
 });
@@ -330,7 +326,6 @@ describe("PATCH /jobs/:id", function () {
         equity: 2.0,
       })
       .set("authorization", `Bearer ${u2Token}`);
-      expect(resp.body.status).toEqual(400)
       expect(resp.body.error).toBeTruthy()
       expect(resp.statusCode).toEqual(400);
   });

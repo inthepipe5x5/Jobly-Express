@@ -26,18 +26,25 @@ router.post("/", ensureLoggedIn, requireAdmin, async function (req, res, next) {
   try {
     const validator = jsonschema.validate(req.body, jobNewSchema);
     if (!validator.valid) {
-      const errs = validator.errors.map(e => e.stack);
-      throw new BadRequestError(errs, 400);
+      const errs = validator.errors.map((e) => e.stack);
+      throw new BadRequestError(errs);
     }
 
     const job = await Job.create(req.body);
     return res.status(201).json({ job });
   } catch (err) {
-    return next(err);
+    //set err.status to 400 if BadRequestError
+    if (err instanceof BadRequestError) {
+      err.status = 400;
+      return next(err);
+    } else {
+      //throw to global error handler
+      return next(err);
+    }
   }
 });
 
-/** 
+/**
  *  Filter jobs by one or all of the following query string parameters
  *  GET /search => [{ job }, { job }, { job }]
  *
@@ -97,33 +104,43 @@ router.get("/:id", async function (req, res, next) {
  * Authorization required: login, admin
  */
 
-router.patch("/:id", ensureLoggedIn, requireAdmin, async function (req, res, next) {
-  try {
-    const validator = jsonschema.validate(req.body, jobUpdateSchema);
-    if (!validator.valid) {
-      const errs = validator.errors.map(e => e.stack);
-      throw new BadRequestError(errs);
-    }
+router.patch(
+  "/:id",
+  ensureLoggedIn,
+  requireAdmin,
+  async function (req, res, next) {
+    try {
+      const validator = jsonschema.validate(req.body, jobUpdateSchema);
+      if (!validator.valid) {
+        const errs = validator.errors.map((e) => e.stack);
+        throw new BadRequestError(errs);
+      }
 
-    const job = await Job.update(req.params.id, req.body);
-    return res.json({ job });
-  } catch (err) {
-    return next(err);
+      const job = await Job.update(req.params.id, req.body);
+      return res.json({ job });
+    } catch (err) {
+      return next(err);
+    }
   }
-});
+);
 
 /** DELETE /[id]  =>  { deleted: id }
  *
  * Authorization: login, admin
  */
 
-router.delete("/:id", ensureLoggedIn, requireAdmin, async function (req, res, next) {
-  try {
-    await Job.remove(req.params.id);
-    return res.json({ deleted: req.params.id });
-  } catch (err) {
-    return next(err);
+router.delete(
+  "/:id",
+  ensureLoggedIn,
+  requireAdmin,
+  async function (req, res, next) {
+    try {
+      await Job.remove(req.params.id);
+      return res.json({ deleted: req.params.id });
+    } catch (err) {
+      return next(err);
+    }
   }
-});
+);
 
 module.exports = router;
