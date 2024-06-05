@@ -7,7 +7,7 @@ const express = require("express");
 
 const { BadRequestError, ExpressError } = require("../expressError");
 const { ensureLoggedIn, requireAdmin } = require("../middleware/auth");
-const {validateQStrReq} = require("../middleware/filter")
+const { validateQStrReq } = require("../middleware/filter");
 const Company = require("../models/company");
 
 const companyNewSchema = require("../schemas/companyNew.json");
@@ -39,7 +39,7 @@ router.post("/", ensureLoggedIn, requireAdmin, async function (req, res, next) {
   }
 });
 
-/** 
+/**
  *  Filter companies by one or all of the following query string parameters
  *  GET /[name, minEmployees, maxEmployees]  =>  [{ company }, { company }, { company }]
  *
@@ -78,7 +78,6 @@ router.get("/", async function (req, res, next) {
   }
 });
 
-
 /** GET /[handle]  =>  { company }
  *
  *  Company is { handle, name, description, numEmployees, logoUrl, jobs }
@@ -90,6 +89,20 @@ router.get("/", async function (req, res, next) {
 router.get("/:handle", async function (req, res, next) {
   try {
     const company = await Company.get(req.params.handle);
+
+    const jobsRes = await db.query(
+      `SELECT 
+            id, 
+            title, 
+            salary, 
+            equity  
+          FROM jobs
+          WHERE handle=$1`,
+      [handle]
+    );
+
+    if (!companyRes) throw new NotFoundError(`No company: ${handle}`);
+    if (jobsRes.rows) company.jobs = jobsRes.rows;
     return res.json({ company });
   } catch (err) {
     return next(err);
@@ -107,33 +120,43 @@ router.get("/:handle", async function (req, res, next) {
  * Authorization required: login
  */
 
-router.patch("/:handle", ensureLoggedIn, requireAdmin, async function (req, res, next) {
-  try {
-    const validator = jsonschema.validate(req.body, companyUpdateSchema);
-    if (!validator.valid) {
-      const errs = validator.errors.map((e) => e.stack);
-      throw new BadRequestError(errs);
-    }
+router.patch(
+  "/:handle",
+  ensureLoggedIn,
+  requireAdmin,
+  async function (req, res, next) {
+    try {
+      const validator = jsonschema.validate(req.body, companyUpdateSchema);
+      if (!validator.valid) {
+        const errs = validator.errors.map((e) => e.stack);
+        throw new BadRequestError(errs);
+      }
 
-    const company = await Company.update(req.params.handle, req.body);
-    return res.json({ company });
-  } catch (err) {
-    return next(err);
+      const company = await Company.update(req.params.handle, req.body);
+      return res.json({ company });
+    } catch (err) {
+      return next(err);
+    }
   }
-});
+);
 
 /** DELETE /[handle]  =>  { deleted: handle }
  *
  * Authorization: login
  */
 
-router.delete("/:handle", ensureLoggedIn, requireAdmin, async function (req, res, next) {
-  try {
-    await Company.remove(req.params.handle);
-    return res.json({ deleted: req.params.handle });
-  } catch (err) {
-    return next(err);
+router.delete(
+  "/:handle",
+  ensureLoggedIn,
+  requireAdmin,
+  async function (req, res, next) {
+    try {
+      await Company.remove(req.params.handle);
+      return res.json({ deleted: req.params.handle });
+    } catch (err) {
+      return next(err);
+    }
   }
-});
+);
 
 module.exports = router;

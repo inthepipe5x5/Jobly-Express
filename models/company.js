@@ -64,22 +64,47 @@ class Company {
    *
    * Throws NotFoundError if not found.
    **/
-
   static async get(handle) {
     const companyRes = await db.query(
       `SELECT handle,
-                  name,
-                  description,
-                  num_employees AS "numEmployees",
-                  logo_url AS "logoUrl"
-           FROM companies
-           WHERE handle = $1`,
+            name,
+            description,
+            num_employees AS "numEmployees",
+            logo_url AS "logoUrl"
+     FROM companies
+     WHERE handle = $1`,
       [handle]
     );
-
     const company = companyRes.rows[0];
 
+    // Check if company is falsy before checking related jobs
     if (!company) throw new NotFoundError(`No company: ${handle}`);
+
+    // Query db for jobs with the same company handle
+    const jobRes = await db.query(
+      `SELECT id,
+            title,
+            salary,
+            equity,
+            company_handle AS "companyHandle"
+     FROM jobs
+     WHERE company_handle = $1`,
+      [company.handle || handle]
+    );
+
+    company["jobs"] = jobRes
+      ? jobRes.rows.map((job) => {
+          // Map function to loop through array of job objects and convert equity property to float num if truthy
+          if (job.equity === null || !job.equity) job.equity = null;
+          else {
+            // Parse equity string using `+` operator which is faster than parseFloat() given we will only work with 0 < equity < 1 or null values
+            job.equity = +job.equity;
+            // Check if NaN
+            job.equity = isNaN(job.equity) ? null : job.equity;
+          }
+          return job;
+        })
+      : [];
 
     return company;
   }
