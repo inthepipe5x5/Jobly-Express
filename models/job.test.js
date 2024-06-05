@@ -22,6 +22,8 @@ beforeEach(async () => {
   );
   //assign value of found job to testJob
   testJob = result.rows[0];
+  //turn testJob.equity into a float number instead of a string
+  testJob.equity = +testJob.equity
 });
 afterEach(commonAfterEach);
 afterAll(commonAfterAll);
@@ -45,6 +47,8 @@ describe("create", function () {
        FROM jobs
        WHERE id = ${job.id}`
     );
+    //turn results
+    result.rows[0].equity = +result.rows[0].equity
     expect(result.rows).toEqual([{ id: job.id, ...newJob }]);
   });
 });
@@ -189,7 +193,7 @@ describe("Job model class UPDATE method", function () {
       id: testJob.id,
       title: "job_1-updated",
       salary: 20000000,
-      equity: "0.9",
+      equity: 0.9,
       companyHandle: "c2",
     });
 

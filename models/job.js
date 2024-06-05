@@ -22,7 +22,17 @@ class Job {
       [title, salary, equity, companyHandle]
     );
     const job = result.rows[0];
-    return job;
+    {
+      // convert equity property to float num if job is truthy
+      if (job.equity === null || !job.equity) job.equity = null;
+      else {
+        // Parse equity string using `+` operator which is faster than parseFloat() given we will only work with 0 < equity < 1 or null values
+        job.equity = +job.equity;
+        // Check if NaN
+        job.equity = isNaN(job.equity) ? null : job.equity;
+      }
+      return job;
+    }
   }
 
   /** Find all jobs.
@@ -35,7 +45,17 @@ class Job {
            FROM jobs
            ORDER BY title`
     );
-    return jobsRes.rows;
+    return jobsRes.rows.map((job) => {
+      // Map function to loop through array of job objects and convert equity property to float num if truthy
+      if (job.equity === null || !job.equity) job.equity = null;
+      else {
+        // Parse equity string using `+` operator which is faster than parseFloat() given we will only work with 0 < equity < 1 or null values
+        job.equity = +job.equity;
+        // Check if NaN
+        job.equity = isNaN(job.equity) ? null : job.equity;
+      }
+      return job;
+    });
   }
 
   /** Given a job id, return data about job.
@@ -53,7 +73,17 @@ class Job {
     );
     const job = jobRes.rows[0];
     if (!job) throw new NotFoundError(`No job: ${id}`);
-    return job;
+    else {
+      // convert equity property to float num if job is truthy
+      if (job.equity === null || !job.equity) job.equity = null;
+      else {
+        // Parse equity string using `+` operator which is faster than parseFloat() given we will only work with 0 < equity < 1 or null values
+        job.equity = +job.equity;
+        // Check if NaN
+        job.equity = isNaN(job.equity) ? null : job.equity;
+      }
+      return job;
+    }
   }
 
   /** Update job data with `data`.
@@ -81,8 +111,18 @@ class Job {
     const job = result.rows[0];
 
     if (!job) throw new NotFoundError(`No job: ${id}`);
-    return job;
-  }
+    else {
+        // convert equity property to float num if job is truthy
+        if (job.equity === null || !job.equity) job.equity = null;
+        else {
+          // Parse equity string using `+` operator which is faster than parseFloat() given we will only work with 0 < equity < 1 or null values
+          job.equity = +job.equity;
+          // Check if NaN
+          job.equity = isNaN(job.equity) ? null : job.equity;
+        }
+        return job;
+      }
+    }
 
   /** Find a list of jobs given a list of search parameters: title, minSalary, maxSalary, hasEquity
    *
@@ -124,13 +164,22 @@ class Job {
   `;
 
     const result = await db.query(query, values);
-    const jobs = result.rows;
 
-    if (jobs.length === 0) {
+    if (result.length === 0) {
       throw new NotFoundError(`No jobs found matching the search criteria.`);
+    } else {
+      return result.rows.map((job) => {
+        // Map function to loop through array of job objects and convert equity property to float num if truthy
+        if (job.equity === null || !job.equity) job.equity = null;
+        else {
+          // Parse equity string using `+` operator which is faster than parseFloat() given we will only work with 0 < equity < 1 or null values
+          job.equity = +job.equity;
+          // Check if NaN
+          job.equity = isNaN(job.equity) ? null : job.equity;
+        }
+        return job;
+      });
     }
-
-    return jobs;
   }
 
   /** Delete given job from database; returns undefined.
