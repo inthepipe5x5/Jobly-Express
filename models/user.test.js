@@ -214,8 +214,7 @@ describe("update", function () {
 describe("remove", function () {
   test("works", async function () {
     await User.remove("u1");
-    const res = await db.query(
-        "SELECT * FROM users WHERE username='u1'");
+    const res = await db.query("SELECT * FROM users WHERE username='u1'");
     expect(res.rows.length).toEqual(0);
   });
 
@@ -226,5 +225,76 @@ describe("remove", function () {
     } catch (err) {
       expect(err instanceof NotFoundError).toBeTruthy();
     }
+  });
+});
+
+/************************************** register */
+describe("PART 5 - Job Application method", () => {
+  test("P5 - Job App func works", async () => {
+    const jobRes = await db.query(`SELECT id FROM jobs WHERE title = $1`, [
+      "job_1",
+    ]);
+    const testJobId = jobRes.rows[0].id;
+
+    await User.applyForJob("u1", testJobId);
+
+    const pleaseHireMe = await db.query(
+      `SELECT * FROM applications WHERE username = $1 AND job_id = $2`,
+      ["u1", testJobId]
+    );
+
+    expect(pleaseHireMe.rows.length).toEqual(1);
+    expect(pleaseHireMe.rows[0]).toEqual({ username: "u1", job_id: testJobId });
+  });
+
+  test("P5 - duplicate job app request returns error (fake user)", async () => {
+    const jobRes = await db.query(`SELECT id FROM jobs WHERE title = $1`, [
+      "job_1",
+    ]);
+    const testJobId = jobRes.rows[0].id;
+
+    // First application => should be successful
+    await User.applyForJob("u1", testJobId);
+
+    const pleaseHireMe = await db.query(
+      `SELECT * FROM applications WHERE username = $1 AND job_id = $2`,
+      ["u1", testJobId]
+    );
+
+    expect(pleaseHireMe.rows.length).toEqual(1);
+    expect(pleaseHireMe.rows[0]).toEqual({ username: "u1", job_id: testJobId });
+
+    // Second application => should throw error
+    try {
+      await User.applyForJob("u1", testJobId);
+    } catch (err) {
+      expect(err instanceof BadRequestError).toBeTruthy();
+      expect(err.message).toEqual(`Duplicate application for username: u1`);
+    }
+  });
+
+  test("P5 - Job App func does not work (foreign key constraint is caught; 400 error thrown for non-existent user)", async () => {
+    const jobRes = await db.query(`SELECT id FROM jobs WHERE title = $1`, [
+      "job_1",
+    ]);
+    const testJobId = jobRes.rows[0].id;
+
+    try {
+      await User.applyForJob("u999999999", testJobId);
+    } catch (err) {
+      expect(err instanceof BadRequestError).toBeTruthy();
+      expect(err.message).toContain(`insert or update on table \"applications\" violates foreign key constraint \"applications_username_fkey\"`);
+    }
+
+    // Rollback transaction to ensure the database is not in a failed state
+    await db.query("ROLLBACK");
+    await db.query("BEGIN");
+
+    const fraudulentJobApp = await db.query(
+      `SELECT * FROM applications WHERE username = $1 AND job_id = $2`,
+      ["u999999999", testJobId]
+    );
+
+    expect(fraudulentJobApp.rows.length).toEqual(0);
   });
 });
