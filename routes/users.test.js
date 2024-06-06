@@ -303,8 +303,7 @@ describe("POST /users/:username/jobs/:id", () => {
 
     expect(response.statusCode).toEqual(201);
     expect(response.body).toEqual({
-      job: {
-        username: "u1",
+      applied: {
         job_id: jobId,
       },
     });
@@ -318,23 +317,41 @@ describe("POST /users/:username/jobs/:id", () => {
       .set("authorization", `Bearer ${u1Token}`); // Second application
 
     expect(response.statusCode).toEqual(400);
-    expect(response.body.error.message).toEqual("Bad Request");
+    expect(response.body.error.message).toEqual(
+      "Duplicate application for username: u1"
+    );
   });
 
   test("applying for a job with a non-existent user returns error", async () => {
     const response = await request(app)
       .post(`/users/nonexistent_user/jobs/${jobId}`)
       .set("authorization", `Bearer ${u1Token}`);
+    //expect postgres error message & 400 status response
+    expect(
+      response.body.error.message.includes(
+        'insert or update on table "applications" violates foreign key constraint'
+      )
+    ).toEqual(true);
 
-    expect(response.body.error.message).toEqual("Bad Request");
     expect(response.statusCode).toEqual(400);
   });
 
   test("unauth for anon user", async () => {
     const response = await request(app).post(`/users/u1/jobs/${jobId}`);
 
-    expect(response.body).toEqual({ message: "Unauthorized" });
+    expect(response.body.error.message).toEqual("Unauthorized");
     expect(response.statusCode).toEqual(401);
+  });
+
+  test("bad request (fake token) gets 401 error response", async () => {
+    const fakeJobId = 1234;
+
+    const response = await request(app)
+      .post(`/users/u1/jobs/${fakeJobId}`)
+      .set("authorization", `Bearer ${fakeJobId + u1Token}`);
+    //expect Unauthorized express error & 401 status response
+    expect(response.statusCode).toEqual(401);
+    expect(response.body.error.message).toEqual("Unauthorized");
   });
 
   test("bad request (fake job) gets 400 error response", async () => {
@@ -344,7 +361,12 @@ describe("POST /users/:username/jobs/:id", () => {
       .post(`/users/u1/jobs/${fakeJobId}`)
       .set("authorization", `Bearer ${u1Token}`);
 
+    //expect postgres error message & 400 status response
     expect(response.statusCode).toEqual(400);
-    expect(response.body.error.message).toEqual("Bad Request");
+    expect(
+      response.body.error.message.includes(
+        'insert or update on table "applications" violates foreign key constraint'
+      )
+    ).toEqual(true);
   });
 });

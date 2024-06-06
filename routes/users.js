@@ -31,7 +31,7 @@ const router = express.Router();
  */
 
 router.post(
-  "/users/:username/jobs/:id",
+  "/:username/jobs/:id",
   ensureLoggedIn,
   async (req, res, next) => {
     try {
