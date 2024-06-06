@@ -201,7 +201,7 @@ class User {
 
     if (!user) throw new NotFoundError(`No user: ${username}`);
   }
-/** PART 5 - Model method for User to apply for a job
+  /** PART 5 - Model method for User to apply for a job
   
   Checks applications table for entry
   Throws error if matching application entry found - (Bad Request, 400)
@@ -217,18 +217,20 @@ class User {
          WHERE username = $1 AND job_id = $2`,
         [username, jobId]
       );
-  
+
       if (duplicateCheck.rows.length > 0) {
-        throw new BadRequestError(`Duplicate application for username: ${username}`);
+        throw new BadRequestError(
+          `Duplicate application for username: ${username}`
+        );
       }
-  
+
       const result = await db.query(
         `INSERT INTO applications (username, job_id)
          VALUES ($1, $2)
          RETURNING job_id`,
         [username, jobId]
       );
-  
+
       const newJobApp = result.rows[0];
       return newJobApp;
     } catch (err) {
@@ -236,7 +238,6 @@ class User {
       throw new BadRequestError(err.message);
     }
   }
-  
 }
 
 module.exports = User;
