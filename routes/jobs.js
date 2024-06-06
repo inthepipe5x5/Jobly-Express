@@ -32,44 +32,20 @@ router.post("/", ensureLoggedIn, requireAdmin, async function (req, res, next) {
     const job = await Job.create(req.body);
     return res.status(201).json({ job });
   } catch (err) {
-    console.error("Caught error:", err); // Add this line for debugging
-
-    if (err instanceof BadRequestError) {
-      return res.status(400).json({ error: err.message });
-    } else {
-      // Delegate to global error handler if it's not a BadRequestError
-      return next(err);
-    }
-  }
-});
-/**
- *  Filter jobs by one or all of the following query string parameters
- *  GET /search => [{ job }, { job }, { job }]
- *
- *  job is { id, title, salary, equity, companyHandle }
- *
- * Authorization required: none
- */
-
-router.get("/search", validateQStrReq, async function (req, res, next) {
-  try {
-    const jobs = await Job.find(req.searchQuery);
-    return res.json({ jobs });
-  } catch (err) {
+    console.error("Caught error in POST/ new jobs route:", err);
     return next(err);
   }
 });
 
-/** GET / =>
+/** GET /search =>
  *   { jobs: [ { id, title, salary, equity, companyHandle }, ...] }
  *
  * Authorization required: none
  */
 
-router.get("/", async function (req, res, next) {
+router.get("/search", async function (req, res, next) {
   try {
-    const jobs = await Job.findAll();
-    if (!jobs) throw new NotFoundError();
+    const jobs = await Job.find(req.query);
     return res.json({ jobs });
   } catch (err) {
     return next(err);
@@ -142,5 +118,21 @@ router.delete(
     }
   }
 );
+
+/** GET / =>
+ *   { jobs: [ { id, title, salary, equity, companyHandle }, ...] }
+ *
+ * Authorization required: none
+ */
+
+router.get("/", async function (req, res, next) {
+  try {
+    const jobs = await Job.findAll();
+    if (!jobs) throw new NotFoundError();
+    return res.json({ jobs });
+  } catch (err) {
+    return next(err);
+  }
+});
 
 module.exports = router;

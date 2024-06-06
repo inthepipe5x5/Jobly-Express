@@ -18,7 +18,7 @@ const {
   u2Token,
 } = require("./_testCommon");
 
-let job1, job2, job3, job4;
+let job1, job2, job3;
 
 beforeAll(async () => {
   await commonBeforeAll();
@@ -26,9 +26,9 @@ beforeAll(async () => {
 beforeEach(async () => {
   await commonBeforeEach();
   const result = await db.query(
-    `SELECT id, title, salary, equity, company_handle AS "companyHandle" FROM jobs WHERE title IN ('job_1', 'job_2', 'job_3', 'job_4')`
+    `SELECT id, title, salary, equity, company_handle AS "companyHandle" FROM jobs WHERE title IN ('job_1', 'job_2', 'job_3')`
   );
-  [job1, job2, job3, job4] = result.rows;
+  [job1, job2, job3] = result.rows;
   job1 = job1
     ? job1
     : {
@@ -51,14 +51,6 @@ beforeEach(async () => {
         title: "job_3",
         salary: 300000,
         equity: 0.3,
-        companyHandle: "c3",
-      };
-  job4 = job4
-    ? job4
-    : {
-        title: "job_4",
-        salary: 400000,
-        equity: null,
         companyHandle: "c3",
       };
 });
@@ -112,7 +104,7 @@ describe("POST /jobs", function () {
       .send({
         ...newJob,
         salary: -100,
-        equity: 2.0,i
+        equity: 2.0,
       })
       .set("authorization", `Bearer ${u2Token}`);
     expect(resp.statusCode).toEqual(400);
@@ -124,7 +116,7 @@ describe("POST /jobs", function () {
 describe("GET /jobs", function () {
   test("GET all /jobs ok for anon", async function () {
     const resp = await request(app).get("/jobs");
-    expect(resp.body.jobs.length).toEqual(3)
+    expect(resp.body.jobs.length).toEqual(3);
     expect(resp.body).toEqual({
       jobs: [
         {
@@ -148,19 +140,26 @@ describe("GET /jobs", function () {
           equity: 0.3,
           companyHandle: "c3",
         },
-        {
-          id: job4.id,
-          title: "job_4",
-          salary: 40000,
-          equity: null,
-          companyHandle: "c3",
-        },
       ],
     });
   });
 
+  test("fails: test next() handler", async function () {
+    // there's no normal failure event which will cause this route to fail ---
+    // thus making it hard to test that the error-handler works with it. This
+    // should cause an error, all right :)
+    await db.query("DROP TABLE jobs CASCADE");
+    const resp = await request(app)
+      .get("/jobs")
+      .set("authorization", `Bearer ${u1Token}`);
+    expect(resp.statusCode).toEqual(500);
+  });
+});
+
+/************************************** GET /jobs/:id */
+describe("GET /search jobs route tests", () => {
   test("test filter title", async function () {
-    const resp = await request(app).get(`/jobs?title=2`);
+    const resp = await request(app).get(`/jobs/search?title=2`);
     expect(resp.body).toEqual({
       jobs: [
         {
@@ -173,9 +172,8 @@ describe("GET /jobs", function () {
       ],
     });
   });
-
   test("test filter minSalary", async function () {
-    const resp = await request(app).get("/jobs?minSalary=100000");
+    const resp = await request(app).get("/jobs/search?minSalary=100000");
     expect(resp.body).toEqual({
       jobs: [
         {
@@ -204,7 +202,7 @@ describe("GET /jobs", function () {
   });
 
   test("test filter hasEquity", async function () {
-    const resp = await request(app).get("/jobs?hasEquity=true");
+    const resp = await request(app).get("/jobs/search?hasEquity=true");
     expect(resp.body).toEqual({
       jobs: [
         {
@@ -231,19 +229,7 @@ describe("GET /jobs", function () {
       ],
     });
   });
-
-  test("fails: test next() handler", async function () {
-    // there's no normal failure event which will cause this route to fail ---
-    // thus making it hard to test that the error-handler works with it. This
-    // should cause an error, all right :)
-    await db.query("DROP TABLE jobs CASCADE");
-    const resp = await request(app)
-      .get("/jobs")
-      .set("authorization", `Bearer ${u1Token}`);
-    expect(resp.statusCode).toEqual(500);
-  });
 });
-
 /************************************** GET /jobs/:id */
 
 describe("GET /jobs/:id", function () {
@@ -314,7 +300,7 @@ describe("PATCH /jobs/:id", function () {
         title: "new nope",
       })
       .set("authorization", `Bearer ${u2Token}`);
-    expect(resp.body).toEqual({"error": {"message": "No job: 0", "status": 404}});
+    expect(resp.body).toEqual({ error: { message: "No job: 0", status: 404 } });
     expect(resp.statusCode).toEqual(404);
   });
 
@@ -326,8 +312,8 @@ describe("PATCH /jobs/:id", function () {
         equity: 2.0,
       })
       .set("authorization", `Bearer ${u2Token}`);
-      expect(resp.body.error).toBeTruthy()
-      expect(resp.statusCode).toEqual(400);
+    expect(resp.body.error).toBeTruthy();
+    expect(resp.statusCode).toEqual(400);
   });
 });
 
