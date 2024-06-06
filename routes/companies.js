@@ -54,9 +54,9 @@ router.post("/", ensureLoggedIn, requireAdmin, async function (req, res, next) {
  * Authorization required: none
  */
 
-router.get("/search", validateQStrReq, async function (req, res, next) {
+router.get("/search", async function (req, res, next) {
   try {
-    const companies = await Company.find(req.searchQuery);
+    const companies = await Company.find(req.query);
     return res.json({ companies });
   } catch (err) {
     return next(err);
@@ -93,8 +93,9 @@ router.get("/", async function (req, res, next) {
 
 router.get("/:handle", async function (req, res, next) {
   try {
-    const company = await Company.get(req.params.handle);
+    const { handle } = req.params;
 
+    let company = await Company.get(handle);
     const jobsRes = await db.query(
       `SELECT 
             id, 
@@ -102,12 +103,20 @@ router.get("/:handle", async function (req, res, next) {
             salary, 
             equity  
           FROM jobs
-          WHERE handle=$1`,
+          WHERE company_handle=$1`,
       [handle]
     );
 
-    if (!companyRes) throw new NotFoundError(`No company: ${handle}`);
-    if (jobsRes.rows) company.jobs = jobsRes.rows;
+    if (!company) throw new NotFoundError(`No company: ${handle}`);
+    if (jobsRes.rows) {
+      //turn all equity values in jobs to a float number
+
+      // Convert all equity values in jobs to a float number
+      company.jobs = jobsRes.rows.map((job) => ({
+        ...job,
+        equity: job.equity !== null ? +job.equity : 0,
+      }));
+    }
     return res.json({ company });
   } catch (err) {
     return next(err);
