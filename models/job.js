@@ -165,7 +165,7 @@ class Job {
 
     const result = await db.query(query, values);
 
-    if (result.length === 0) {
+    if (result.rows.length === 0) {
       throw new NotFoundError(`No jobs found matching the search criteria.`);
     } else {
       return result.rows.map((job) => {

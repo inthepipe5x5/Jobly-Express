@@ -69,8 +69,40 @@ function ensureLoggedIn(req, res, next) {
   }
 }
 
+/** Middleware to check if request is being made by a user who matches the user profile they ar attempting to manipulate
+ *
+ * If not, raises Unauthorized.
+ */
+
+function ensureRightUser(req, res, next) {
+  try {
+    const { username, isAdmin } = res.locals.user || {};
+
+    // If no user is authenticated, return an unauthorized error
+    if (!username) {
+      throw new UnauthorizedError("Unauthorized", 401);
+    }
+
+    // If the user is an admin, allow access
+    if (isAdmin) {
+      return next();
+    }
+
+    // If the user is not an admin, check if the requested username matches the authenticated user's username
+    if (username === req.params.username) {
+      return next();
+    }
+
+    // If the user is not an admin and the requested username doesn't match, return an unauthorized error
+    throw new UnauthorizedError("Unauthorized", 401);
+  } catch (err) {
+    return next(err);
+  }
+}
+
 module.exports = {
   authenticateJWT,
   ensureLoggedIn,
   requireAdmin,
+  ensureRightUser,
 };
