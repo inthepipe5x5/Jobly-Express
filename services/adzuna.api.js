@@ -50,7 +50,8 @@ class AdzunaApi {
         this.apiCallCount = 0; // Initialize API call count
     }
 
-    async baseJobSearch({ searchTerms,
+    async baseJobSearch({
+        searchTerms,
         category,
         sort_dir = null,
         sort_by = "relevance",
@@ -64,7 +65,7 @@ class AdzunaApi {
         partTimeJobsOnly = false,
         contractJobsOnly = false,
         permanentJobsOnly = false,
-        whatOr
+        orTerms = null,
     } = {
             sort_by: "relevance",
             page: 1,
@@ -83,6 +84,8 @@ class AdzunaApi {
         switch (true) {
             case Boolean(searchTerms):
                 initParams.what = searchTerms;
+            case Boolean(orTerms):
+                initParams.what_or = orTerms;
             case Boolean(category):
                 initParams.category = category;
             case Boolean(distance_in_km) && distance_in_km >= 0:
@@ -252,3 +255,7 @@ class AdzunaApi {
         console.log(`API call count: ${this.apiCallCount}/${this.dailyApiCallLimit}`);
     }
 }
+
+module.exports = AdzunaApi;
+module.exports.getAdzunaConfig = getAdzunaConfig;
+module.exports.getAdzunaApiUrl = getAdzunaApiUrl;

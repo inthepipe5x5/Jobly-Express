@@ -11,6 +11,7 @@ const { validateQStrReq } = require("../middleware/filter");
 const Job = require("../models/job");
 const jobNewSchema = require("../schemas/jobNew.json");
 const jobUpdateSchema = require("../schemas/jobUpdate.json");
+const { AdzunaApi } = require("../helpers/adzunaApi");
 const router = new express.Router();
 
 /** POST / { job } =>  { job }
@@ -134,5 +135,42 @@ router.get("/", async function (req, res, next) {
     return next(err);
   }
 });
+
+router.get("/search", validateQStrReq, async function (req, res, next) {
+  try {
+    const location0 = req?.query?.country ?? "ca";
+    const location1 = req?.query?.region ?? "on";
+    const location2 = req?.query?.city ?? "toronto";
+    const adzunaApi = new AdzunaApi();
+
+    const adzunaJobs = await adzunaApi.searchJobs({
+      searchTerm: req?.query?.title ?? req?.query?.searchTerms,
+      category: req.query?.category ?? null,
+      salaryMinInt: req?.query?.minSalary ?? null,
+      salaryMaxInt: req?.query?.maxSalary ?? null,
+      location0,
+      location1,
+      location2,
+      page: req?.query?.page ?? 1,
+      resultsPerPage: req?.query?.resultsPerPage ?? 20,
+      fullTime: req?.query?.fullTime === 'true' ? true : null,
+      partTime: req?.query?.partTime === 'true' ? true : null,
+      contractJobsOnly: req?.query?.contractJobsOnly === 'true' ? true : null,
+      permanentJobsOnly: req?.query?.permanentJobsOnly === 'true' ? true : null,
+      sortDirection: req?.query?.sortDirection ?? null,
+      sortBy: req?.query?.sortBy ?? null,
+    });
+
+    if (!adzunaJobs || adzunaJobs.length === 0) {
+      throw new NotFoundError(`No jobs found matching the search criteria.`);
+    }
+
+    return res.json({ ...adzunaJobs });
+
+  } catch (err) {
+    return next(err);
+  }
+});
+
 
 module.exports = router;
