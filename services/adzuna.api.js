@@ -76,7 +76,7 @@ class AdzunaApi {
         this.checkApiCallLimit();
 
         // Validate input parameters
-        const url = new URL(getAdzunaApiUrl("jobs") + `/${this.country}/search/1`);
+        const url = new URL(getAdzunaApiUrl(`jobs/${this.country}/search/${page ?? 1}`));
         const initParams = {
             app_id: this.config.ADZUNA_API_APP_ID,
             app_key: this.config.ADZUNA_API_KEY,
@@ -253,6 +253,36 @@ class AdzunaApi {
         }
         this.apiCallCount++;
         console.log(`API call count: ${this.apiCallCount}/${this.dailyApiCallLimit}`);
+    }
+
+
+    getJobCategories(country = this.country ?? "ca") {
+        this.checkApiCallLimit();
+        const url = new URL(getAdzunaApiUrl(`/${country}/categories`));
+        const initParams = {
+            app_id: this.config.ADZUNA_API_APP_ID,
+            app_key: this.config.ADZUNA_API_KEY,
+        };
+        url.search = new URLSearchParams(initParams).toString();
+
+        return fetch(url.toString(), {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Error fetching job categories from ${url.toString()}: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (!data || typeof data !== 'object') {
+                    throw new Error("Unexpected response format from Adzuna API");
+                }
+                return data;
+            });
     }
 }
 
