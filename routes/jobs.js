@@ -11,7 +11,7 @@ const { validateQStrReq } = require("../middleware/filter");
 const Job = require("../models/job");
 const jobNewSchema = require("../schemas/jobNew.json");
 const jobUpdateSchema = require("../schemas/jobUpdate.json");
-const { AdzunaApi } = require("../helpers/adzunaApi");
+const { AdzunaApi } = require("../services/adzuna.api");
 const router = new express.Router();
 
 /** POST / { job } =>  { job }
