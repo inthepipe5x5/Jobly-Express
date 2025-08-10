@@ -1,0 +1,1644 @@
+{
+  "ABILITIES": {
+    "Cognitive Abilities": {
+      "Information Ordering": {
+        "descriptor": "Information Ordering",
+        "definition": "The ability to arrange things or actions in a certain order or pattern according to a specific rule or set of rules (e.g., patterns of numbers, letters, words, pictures, mathematical operations).",
+        "category": "Cognitive Abilities"
+      },
+      "Categorization Flexibility": {
+        "descriptor": "Categorization Flexibility",
+        "definition": "The ability to generate or use different sets of rules for combining or grouping things in different ways.",
+        "category": "Cognitive Abilities"
+      },
+      "Deductive Reasoning": {
+        "descriptor": "Deductive Reasoning",
+        "definition": "The ability to apply general rules to produce logical answers for specific problems.",
+        "category": "Cognitive Abilities"
+      },
+      "Inductive Reasoning": {
+        "descriptor": "Inductive Reasoning",
+        "definition": "The ability to combine pieces of information to form general rules or conclusions, which includes finding a relationship among seemingly unrelated events.",
+        "category": "Cognitive Abilities"
+      },
+      "Fluency of Ideas": {
+        "descriptor": "Fluency of Ideas",
+        "definition": "The ability to come up with multiple ideas about a topic.",
+        "category": "Cognitive Abilities"
+      },
+      "Problem Identification": {
+        "descriptor": "Problem Identification",
+        "definition": "The ability to identify an existing or potential problem. It is not about solving the problem, but only about recognizing its presence.",
+        "category": "Cognitive Abilities"
+      },
+      "Numerical Ability": {
+        "descriptor": "Numerical Ability",
+        "definition": "The ability to carry out arithmetical processes accurately such as addition, subtraction, multiplication or division.",
+        "category": "Cognitive Abilities"
+      },
+      "Mathematical Reasoning": {
+        "descriptor": "Mathematical Reasoning",
+        "definition": "The ability to choose the right mathematical methods or formulas to solve a problem.",
+        "category": "Cognitive Abilities"
+      },
+      "Memorizing": {
+        "descriptor": "Memorizing",
+        "definition": "The ability to remember information such as words, numbers, pictures, or procedures.",
+        "category": "Cognitive Abilities"
+      },
+      "Multitasking": {
+        "descriptor": "Multitasking",
+        "definition": "The ability to shift back and forth between two or more activities or sources of information during the same time period (such as speech, sounds, touch, or other sources).",
+        "category": "Cognitive Abilities"
+      },
+      "Pattern Identification": {
+        "descriptor": "Pattern Identification",
+        "definition": "The ability to identify or detect a known pattern such as a figure, object, word, or sound that is hidden in other information or material.",
+        "category": "Cognitive Abilities"
+      },
+      "Pattern Organization Speed": {
+        "descriptor": "Pattern Organization Speed",
+        "definition": "The ability to quickly combine and organize information into meaningful patterns.",
+        "category": "Cognitive Abilities"
+      },
+      "Perceptual Speed": {
+        "descriptor": "Perceptual Speed",
+        "definition": "The ability to compare, quickly and accurately, similarities and differences among sets of letters, numbers, objects, pictures, or patterns. The things to be compared may be presented at the same time, one after the other, or with a remembered object.",
+        "category": "Cognitive Abilities"
+      },
+      "Spatial Orientation": {
+        "descriptor": "Spatial Orientation",
+        "definition": "The ability to know your location in relation to the environment or know where objects are in relation to you.",
+        "category": "Cognitive Abilities"
+      },
+      "Spatial Visualization": {
+        "descriptor": "Spatial Visualization",
+        "definition": "The ability to think visually about geometric forms, comprehend the two-dimensional representation of three-dimensional objects and recognize the relationships resulting from the movement of objects in space.",
+        "category": "Cognitive Abilities"
+      },
+      "Verbal Ability": {
+        "descriptor": "Verbal Ability",
+        "definition": "The ability to understand the meaning, precise use, associated ideas, and relationships of spoken words; and to use them in the proper context when presenting information or ideas.",
+        "category": "Cognitive Abilities"
+      },
+      "Written Comprehension": {
+        "descriptor": "Written Comprehension",
+        "definition": "The ability to read and understand information and ideas presented in written form.",
+        "category": "Cognitive Abilities"
+      },
+      "Written Expression": {
+        "descriptor": "Written Expression",
+        "definition": "The ability to communicate information and ideas in writing and adapting the writing style to the audience so that they can understand.",
+        "category": "Cognitive Abilities"
+      },
+      "Selective Attention": {
+        "descriptor": "Selective Attention",
+        "definition": "The ability to concentrate on a task over a period of time without being distracted.",
+        "category": "Cognitive Abilities"
+      },
+      "Form Perception": {
+        "descriptor": "Form Perception",
+        "definition": "The ability to perceive pertinent detail in objects and graphic material; to make visual comparisons and discriminations and to see slight differences in shapes and shadings of figures and widths and lengths of lines.",
+        "category": "Cognitive Abilities"
+      },
+      "General Learning Ability": {
+        "descriptor": "General Learning Ability",
+        "definition": "The ability to \"catch on\" or understand instructions and underlying principles to reason and make judgments.",
+        "category": "Cognitive Abilities"
+      }
+    },
+    "Physical Abilities": {
+      "Trunk Strength": {
+        "descriptor": "Trunk Strength",
+        "definition": "The ability to exert your abdominal and lower back muscles to support part of the body repeatedly or continuously over time without \"giving out\" or fatiguing.",
+        "category": "Physical Abilities"
+      },
+      "Static Strength": {
+        "descriptor": "Static Strength",
+        "definition": "The ability to exert muscle force to lift, push, pull, carry, or transfer objects.",
+        "category": "Physical Abilities"
+      },
+      "Dynamic Strength": {
+        "descriptor": "Dynamic Strength",
+        "definition": "The ability to exert muscle force repeatedly or continuously over time. This involves muscular endurance and resistance to muscle fatigue.",
+        "category": "Physical Abilities"
+      },
+      "Explosive Strength": {
+        "descriptor": "Explosive Strength",
+        "definition": "The ability to exert short bursts of muscle force to propel oneself (as in jumping or sprinting), to throw an object, or to apply force with a tool.",
+        "category": "Physical Abilities"
+      },
+      "Multi-Limb Coordination": {
+        "descriptor": "Multi-Limb Coordination",
+        "definition": "The ability to coordinate two or more limbs, such as two arms, two legs, or one leg and one arm, while sitting, standing, or lying down. It does not involve performing the activities while the whole body is in motion.",
+        "category": "Physical Abilities"
+      },
+      "Gross Body Coordination": {
+        "descriptor": "Gross Body Coordination",
+        "definition": "The ability to coordinate the movement of your arms, legs, and torso together when the whole body is in motion.",
+        "category": "Physical Abilities"
+      },
+      "Gross Body Equilibrium": {
+        "descriptor": "Gross Body Equilibrium",
+        "definition": "The ability to keep or regain your body balance or stay upright when in an unstable position.",
+        "category": "Physical Abilities"
+      },
+      "Body Flexibility": {
+        "descriptor": "Body Flexibility",
+        "definition": "The ability to bend, stretch, twist, or reach with your body, arms, and/or legs.",
+        "category": "Physical Abilities"
+      },
+      "Dynamic Flexibility": {
+        "descriptor": "Dynamic Flexibility",
+        "definition": "The ability to quickly and repeatedly bend, stretch, twist, or reach out with your body, arms, and/or legs.",
+        "category": "Physical Abilities"
+      },
+      "Stamina": {
+        "descriptor": "Stamina",
+        "definition": "The ability to perform intense physical activities over long periods without becoming winded or out of breath.",
+        "category": "Physical Abilities"
+      }
+    },
+    "Psychomotor Abilities": {
+      "Arm-Hand Steadiness": {
+        "descriptor": "Arm-Hand Steadiness",
+        "definition": "The ability to keep your hand and arm steady while moving or holding them in one position.",
+        "category": "Psychomotor Abilities"
+      },
+      "Finger Dexterity": {
+        "descriptor": "Finger Dexterity",
+        "definition": "The ability to make precisely coordinated movements of the fingers of one or both hands to grasp, manipulate, or assemble small objects.",
+        "category": "Psychomotor Abilities"
+      },
+      "Manual Dexterity": {
+        "descriptor": "Manual Dexterity",
+        "definition": "The ability to move your hand, your hand together with your arm, or your two hands to grasp, manipulate, or assemble objects or tools.",
+        "category": "Psychomotor Abilities"
+      },
+      "Motor Coordination": {
+        "descriptor": "Motor Coordination",
+        "definition": "The ability to coordinate eyes, hands and fingers accurately to respond with precise movements.",
+        "category": "Psychomotor Abilities"
+      },
+      "Rate Control": {
+        "descriptor": "Rate Control",
+        "definition": "The ability to time your movements or the movement of a piece of equipment in anticipation of changes in the speed and/or direction of a moving object.",
+        "category": "Psychomotor Abilities"
+      },
+      "Control of Settings": {
+        "descriptor": "Control of Settings",
+        "definition": "The ability to adjust the controls of a machine or a vehicle to exact positions.",
+        "category": "Psychomotor Abilities"
+      },
+      "Multi-Signal Response": {
+        "descriptor": "Multi-Signal Response",
+        "definition": "The ability to choose quickly between one or more movements with the hand, finger, or foot in response to the appearance of two or more different signals such as lights, sounds, or images.",
+        "category": "Psychomotor Abilities"
+      },
+      "Reaction Time": {
+        "descriptor": "Reaction Time",
+        "definition": "The ability to respond quickly with one or more limbs to a stimulus such as noise, light or image.",
+        "category": "Psychomotor Abilities"
+      },
+      "Speed of Limb Movement": {
+        "descriptor": "Speed of Limb Movement",
+        "definition": "The ability to quickly move the arms and legs.",
+        "category": "Psychomotor Abilities"
+      },
+      "Finger-Hand-Wrist Motion": {
+        "descriptor": "Finger-Hand-Wrist Motion",
+        "definition": "The ability to make fast, simple, and repeated movements of the fingers, hands, and wrists.",
+        "category": "Psychomotor Abilities"
+      }
+    },
+    "Sensory Abilities": {
+      "Auditory Attention": {
+        "descriptor": "Auditory Attention",
+        "definition": "The ability to give full attention on a single source of sound in the presence of other distracting sounds.",
+        "category": "Sensory Abilities"
+      },
+      "Hearing Sensitivity": {
+        "descriptor": "Hearing Sensitivity",
+        "definition": "The ability to detect or distinguish the differences between sounds in terms of pitch and volume.",
+        "category": "Sensory Abilities"
+      },
+      "Speech Clarity": {
+        "descriptor": "Speech Clarity",
+        "definition": "The ability to articulate and pronounce words clearly, so others can understand you when you speak.",
+        "category": "Sensory Abilities"
+      },
+      "Speech Recognition": {
+        "descriptor": "Speech Recognition",
+        "definition": "The ability to identify and understand the speech of another person.",
+        "category": "Sensory Abilities"
+      },
+      "Sound Localization": {
+        "descriptor": "Sound Localization",
+        "definition": "The ability to identify the direction, origin and distance from which a sound comes.",
+        "category": "Sensory Abilities"
+      },
+      "Far Vision": {
+        "descriptor": "Far Vision",
+        "definition": "The ability to see details of objects and people at a distance.",
+        "category": "Sensory Abilities"
+      },
+      "Near Vision": {
+        "descriptor": "Near Vision",
+        "definition": "The ability to see details at close range.",
+        "category": "Sensory Abilities"
+      },
+      "Peripheral Vision": {
+        "descriptor": "Peripheral Vision",
+        "definition": "The ability to see objects, people, or their movement in the peripheral field of vision when looking ahead.",
+        "category": "Sensory Abilities"
+      },
+      "Depth Perception": {
+        "descriptor": "Depth Perception",
+        "definition": "The ability to discern which of several objects is closer or farther away from you, or to estimate the distance between you and an object.",
+        "category": "Sensory Abilities"
+      },
+      "Glare Tolerance": {
+        "descriptor": "Glare Tolerance",
+        "definition": "The ability to see objects or people, in the presence of glare or bright lighting.",
+        "category": "Sensory Abilities"
+      },
+      "Night Vision": {
+        "descriptor": "Night Vision",
+        "definition": "The ability to see under low light conditions.",
+        "category": "Sensory Abilities"
+      },
+      "Colour Perception": {
+        "descriptor": "Colour Perception",
+        "definition": "The ability to match or detect differences or similarities between colours, including shades of colour and brightness.",
+        "category": "Sensory Abilities"
+      },
+      "Smell": {
+        "descriptor": "Smell",
+        "definition": "The ability to perceive odours through the nose.",
+        "category": "Sensory Abilities"
+      },
+      "Taste": {
+        "descriptor": "Taste",
+        "definition": "The ability to recognize or verify a particular flavor of a substance by tasting it.",
+        "category": "Sensory Abilities"
+      },
+      "Touch": {
+        "descriptor": "Touch",
+        "definition": "The ability to acquire information about the environment through skin contact.",
+        "category": "Sensory Abilities"
+      }
+    }
+  },
+  "PERSONAL_ABILITIES": {
+    "Social Traits": {
+      "Leadership": {
+        "descriptor": "Leadership",
+        "definition": "The quality of leading others towards a common goal by guiding, influencing, and inspiring them.",
+        "category": "Social Traits"
+      },
+      "Charisma": {
+        "descriptor": "Charisma",
+        "definition": "The quality of possessing charm, attracting and arousing the interest, attention, or admiration of others through speeches, attitudes, temperament, or actions.",
+        "category": "Social Traits"
+      },
+      "Concern for Others": {
+        "descriptor": "Concern for Others",
+        "definition": "The quality of having empathy towards others' feelings and needs and being understanding and helpful.",
+        "category": "Social Traits"
+      },
+      "Collaboration": {
+        "descriptor": "Collaboration",
+        "definition": "The quality of contributing and working cooperatively while being supportive and inclusive of others to achieve a common goal.",
+        "category": "Social Traits"
+      },
+      "Service Orientation": {
+        "descriptor": "Service Orientation",
+        "definition": "The quality of actively looking for ways to help, serve, or assist others.",
+        "category": "Social Traits"
+      },
+      "Trust in Others": {
+        "descriptor": "Trust in Others",
+        "definition": "The quality of establishing and maintaining a relationship of trust with the people around you.",
+        "category": "Social Traits"
+      },
+      "Social Orientation": {
+        "descriptor": "Social Orientation",
+        "definition": "The quality of seeking to work with others and relating to them on the job.",
+        "category": "Social Traits"
+      }
+    },
+    "Self-Improvement": {
+      "Adaptability": {
+        "descriptor": "Adaptability",
+        "definition": "The quality of adapting oneself to expected or unexpected changes and different situations while continuing to achieve past or renewed goals.",
+        "category": "Self-Improvement"
+      },
+      "Self-Control": {
+        "descriptor": "Self-Control",
+        "definition": "The quality of maintaining composure, keeping emotions in check, controlling anger, and avoiding aggressive behaviour, even in very difficult situations.",
+        "category": "Self-Improvement"
+      },
+      "Stress Tolerance": {
+        "descriptor": "Stress Tolerance",
+        "definition": "The quality of being able to remain calm, without being carried away by stress situations and to deal effectively with such situations.",
+        "category": "Self-Improvement"
+      },
+      "Tolerance of Ambiguity": {
+        "descriptor": "Tolerance of Ambiguity",
+        "definition": "The quality of being able to function in an environment where there is uncertainty, unpredictability, conflicting directions or multiple demands and to approach these situations as challenges to improve.",
+        "category": "Self-Improvement"
+      },
+      "Resilience": {
+        "descriptor": "Resilience",
+        "definition": "The quality of recovering from difficulties or changes, one has had to face, to bounce back and then move forward.",
+        "category": "Self-Improvement"
+      },
+      "Self-Awareness": {
+        "descriptor": "Self-Awareness",
+        "definition": "The quality of being aware of own personality, character, and feelings including strengths, weaknesses, thoughts, behaviors, beliefs, motivation, and emotions.",
+        "category": "Self-Improvement"
+      },
+      "Self-Confidence": {
+        "descriptor": "Self-Confidence",
+        "definition": "The quality of trust in one’s ability to achieve goals, believing in one’s potential and abilities, and knowing that one is capable of achieving goals when facing challenges.",
+        "category": "Self-Improvement"
+      },
+      "Active Learning": {
+        "descriptor": "Active Learning",
+        "definition": "The quality of pro-actively looking to understand the implications of new information in the current and changing workplace.",
+        "category": "Self-Improvement"
+      },
+      "Continuous Learning": {
+        "descriptor": "Continuous Learning",
+        "definition": "The quality of wanting to continuously develop and improve one's skills, abilities and knowledge in order to adapt to changes and work effectively.",
+        "category": "Self-Improvement"
+      }
+    },
+    "Results-Based Attributes": {
+      "Achievement": {
+        "descriptor": "Achievement",
+        "definition": "The quality of establishing and maintaining goals and exerting all effort to accomplish them successfully.",
+        "category": "Results-Based Attributes"
+      },
+      "Initiative": {
+        "descriptor": "Initiative",
+        "definition": "The quality of taking on responsibilities and challenges, proposing, doing or organizing something by oneself without being prompted by others.",
+        "category": "Results-Based Attributes"
+      },
+      "Motivation": {
+        "descriptor": "Motivation",
+        "definition": "The quality of being driven by interest, need, reason or reward to achieve something or to reach a set outcome.",
+        "category": "Results-Based Attributes"
+      },
+      "Perseverance": {
+        "descriptor": "Perseverance",
+        "definition": "The quality of voluntarily and deliberately putting forth the effort required by a task or activity despite difficulties, failure or obstacles.",
+        "category": "Results-Based Attributes"
+      },
+      "Risk-Taking": {
+        "descriptor": "Risk-Taking",
+        "definition": "The quality of being willing to make a risky choice, with regard for the consequences, in the hope of achieving a desired results or benefit in return.",
+        "category": "Results-Based Attributes"
+      },
+      "Competitiveness": {
+        "descriptor": "Competitiveness",
+        "definition": "The quality of being driven by a deep desire to be as good as or better than others to perform well in a comparable context.",
+        "category": "Results-Based Attributes"
+      },
+      "Independence": {
+        "descriptor": "Independence",
+        "definition": "The quality of developing one's own way of doing things, guiding oneself with little or no supervision, and depending on oneself to get things done.",
+        "category": "Results-Based Attributes"
+      }
+    },
+    "Professional Conscientiousness": {
+      "Reliable": {
+        "descriptor": "Reliable",
+        "definition": "The quality of being dependable and respectful of commitments.",
+        "category": "Professional Conscientiousness"
+      },
+      "Integrity": {
+        "descriptor": "Integrity",
+        "definition": "The quality of being honest, ethical, and authentic.",
+        "category": "Professional Conscientiousness"
+      },
+      "Being Responsible": {
+        "descriptor": "Being Responsible",
+        "definition": "The quality of taking responsibility for one’s own actions and the actions of a group.",
+        "category": "Professional Conscientiousness"
+      }
+    },
+    "Dynamic Thinking": {
+      "Having Judgement": {
+        "descriptor": "Having Judgement",
+        "definition": "The quality of forming an opinion consistent with common sense based on an assessment of an event or fact.",
+        "category": "Dynamic Thinking"
+      },
+      "Analytical Thinking": {
+        "descriptor": "Analytical Thinking",
+        "definition": "The quality of analyzing information and using logic to address issues and problems.",
+        "category": "Dynamic Thinking"
+      },
+      "Attention to Detail Attention to Detail": {
+        "descriptor": "Attention to Detail Attention to Detail",
+        "definition": "The quality of being meticulous in the execution of tasks.",
+        "category": "Dynamic Thinking"
+      },
+      "Creativity": {
+        "descriptor": "Creativity",
+        "definition": "The quality of coming up with unusual or clever ideas about a given topic or situation, or to develop original ways to solve a problem.",
+        "category": "Dynamic Thinking"
+      },
+      "Innovativeness": {
+        "descriptor": "Innovativeness",
+        "definition": "The quality of alternative thinking to develop new products or services to make improvement or to develop a new approach.",
+        "category": "Dynamic Thinking"
+      },
+      "Entrepreneurial Spirit": {
+        "descriptor": "Entrepreneurial Spirit",
+        "definition": "The quality of identifying and seizing opportunities and moving from idea to achievement.",
+        "category": "Dynamic Thinking"
+      }
+    }
+  },
+  "INTERESTS": {
+    "Holland Codes": {
+      "Realistic": {
+        "descriptor": "Realistic",
+        "definition": "Realistic occupations are characterized by the dominance of activities that entail the explicit, ordered or systematic manipulation of objects, tools, machines and animals. Many of these occupations do not involve a lot of paperwork or working closely with others.",
+        "category": "Holland Codes"
+      },
+      "Investigative": {
+        "descriptor": "Investigative",
+        "definition": "Investigative occupations are characterized by the dominance of activities that entail the observation and systematic or creative investigation of physical, biological, or cultural phenomena. These occupations require an extensive amount of thinking and frequently involve working with ideas, searching for facts and figuring out problems mentally.",
+        "category": "Holland Codes"
+      },
+      "Artistic": {
+        "descriptor": "Artistic",
+        "definition": "Artistic occupations are characterized by the dominance of activities that entail artistic expression to create, compose or produce visual, performing, literary or applied art. These occupations frequently involve working with forms, designs and patterns and often require self-expression and the accomplishment of work without following a clear set of rules.",
+        "category": "Holland Codes"
+      },
+      "Social": {
+        "descriptor": "Social",
+        "definition": "Social occupations are characterized by the dominance of activities that entail the interaction with others to inform, train, aid, develop, cure, or enlighten. These occupations often involve helping or providing service to others, teaching, working or communicating with people.",
+        "category": "Holland Codes"
+      },
+      "Enterprising": {
+        "descriptor": "Enterprising",
+        "definition": "Enterprising occupations are characterized by the dominance of action-oriented activities to attain organizational or self-interest goals. They frequently involve starting up and carrying out projects, influencing, leading or mobilizing people, making decisions, and sometimes require risk taking and dealing with business.",
+        "category": "Holland Codes"
+      },
+      "Conventional": {
+        "descriptor": "Conventional",
+        "definition": "Conventional occupations are characterized by the dominance of activities that entail following sets of procedures and routines. These activities may include systematic manipulation of data, such as keeping records, filing materials, reproducing materials, organizing written and numerical data according to a prescribed plan, and operating business and data processing. They often require following a clear line of authority and usually involve working with data and details more than with ideas.",
+        "category": "Holland Codes"
+      }
+    }
+  },
+  "SKILLS": {
+    "Foundational Skills": {
+      "Oral Communication: Active Listening": {
+        "descriptor": "Oral Communication: Active Listening",
+        "definition": "The capability to give full attention to what other people are saying, take time to understand the points being made, ask questions as appropriate, and not interrupt at inappropriate times.",
+        "category": "Foundational Skills"
+      },
+      "Oral Communication: Oral Comprehension": {
+        "descriptor": "Oral Communication: Oral Comprehension",
+        "definition": "The capability to listen to and understand information and ideas presented through spoken words and sentences.",
+        "category": "Foundational Skills"
+      },
+      "Oral Communication: Oral Expression": {
+        "descriptor": "Oral Communication: Oral Expression",
+        "definition": "The capability to talk to others to convey information effectively.",
+        "category": "Foundational Skills"
+      },
+      "Reading Comprehension": {
+        "descriptor": "Reading Comprehension",
+        "definition": "The capability to understand written information presented through words, sentences, paragraphs, symbols, and images in work-related documents.",
+        "category": "Foundational Skills"
+      },
+      "Writing": {
+        "descriptor": "Writing",
+        "definition": "The capability to communicate in writing by using written words, sentences, paragraphs, symbols, and images and adapted for the needs of the audience.",
+        "category": "Foundational Skills"
+      },
+      "Numeracy": {
+        "descriptor": "Numeracy",
+        "definition": "The capability to understand, use and report numbers and other mathematical information presented through words, numbers, symbols, and graphics.",
+        "category": "Foundational Skills"
+      },
+      "Digital Literacy": {
+        "descriptor": "Digital Literacy",
+        "definition": "The capability to understand and use digital devices and tools to obtain, exchange, create or process digital information in a secure manner.",
+        "category": "Foundational Skills"
+      }
+    },
+    "Analytical Skills": {
+      "Critical Thinking": {
+        "descriptor": "Critical Thinking",
+        "definition": "The capability to use logic and reasoning to question, discern, interpret and analyze various types of information to form an evidence-based conclusion or judgment.",
+        "category": "Analytical Skills"
+      },
+      "Learning and Teaching Strategies": {
+        "descriptor": "Learning and Teaching Strategies",
+        "definition": "The capability to select and use training/instructional methods and procedures appropriate for the situation when learning or teaching new things.",
+        "category": "Analytical Skills"
+      },
+      "Decision Making": {
+        "descriptor": "Decision Making",
+        "definition": "The capability to analyze information among a set of alternatives, to evaluate potential outcome and choose the most appropriate solutions to achieve a predetermined objective.",
+        "category": "Analytical Skills"
+      },
+      "Evaluation": {
+        "descriptor": "Evaluation",
+        "definition": "The capability to systematically assess products, services or processes using measurable indicators with the goal of ensuring or improving performance.",
+        "category": "Analytical Skills"
+      },
+      "Requirements Analysis": {
+        "descriptor": "Requirements Analysis",
+        "definition": "The capability to analyze needs and product requirements to create a design.",
+        "category": "Analytical Skills"
+      },
+      "Systems Analysis": {
+        "descriptor": "Systems Analysis",
+        "definition": "The capability to determine how a system should work and how changes in conditions, operations, and the environment will affect outcomes.",
+        "category": "Analytical Skills"
+      },
+      "Researching and Investigating": {
+        "descriptor": "Researching and Investigating",
+        "definition": "The capability to conduct studies and to examine information and data to increase knowledge, understand facts, find causes, test hypotheses and draw conclusions or make recommendations.",
+        "category": "Analytical Skills"
+      },
+      "Problem Solving": {
+        "descriptor": "Problem Solving",
+        "definition": "The capability to identify problems and review related information to develop solutions or feasible options to achieve the desired end state.",
+        "category": "Analytical Skills"
+      }
+    },
+    "Technical Skills": {
+      "Equipment and Tool Selection": {
+        "descriptor": "Equipment and Tool Selection",
+        "definition": "The capability to choose between two or more types of tools, equipment or, machinery to perform a job.",
+        "category": "Technical Skills"
+      },
+      "Preventative Maintenance": {
+        "descriptor": "Preventative Maintenance",
+        "definition": "The capability to perform maintenance on equipment, devices, building or machinery to keep them in functional and to prevent damage or failures.",
+        "category": "Technical Skills"
+      },
+      "Setting Up": {
+        "descriptor": "Setting Up",
+        "definition": "The capability to set up, adjust, install and assemble equipment, machines, parts or to prepare them for their functioning and use.",
+        "category": "Technical Skills"
+      },
+      "Operation and Control": {
+        "descriptor": "Operation and Control",
+        "definition": "The capability to maneuver and control operations of equipment, machines, vehicles or systems.",
+        "category": "Technical Skills"
+      },
+      "Operation Monitoring of Machinery and Equipment": {
+        "descriptor": "Operation Monitoring of Machinery and Equipment",
+        "definition": "The capability to watch gauges, dials, digital displays or other indicators to ensure a machine or piece of equipment is working according to specifications.",
+        "category": "Technical Skills"
+      },
+      "Troubleshooting": {
+        "descriptor": "Troubleshooting",
+        "definition": "The capability to determine causes of operating errors in equipment, machinery, or technological systems and decide how to resolve the issues.",
+        "category": "Technical Skills"
+      },
+      "Repairing": {
+        "descriptor": "Repairing",
+        "definition": "The capability to replace, restore or adjust defective or deficient components in equipment, machines, and technical systems and test for function, appearance, operation and safety.",
+        "category": "Technical Skills"
+      },
+      "Quality Control Testing": {
+        "descriptor": "Quality Control Testing",
+        "definition": "The capability to conduct tests or inspections of prototypes, products, services, or processes to ensure their quality.",
+        "category": "Technical Skills"
+      },
+      "Product Design": {
+        "descriptor": "Product Design",
+        "definition": "The capacity to design and develop layouts for the construction of objects, equipment, machinery, structures, or engineering systems (excluding software and hardware).",
+        "category": "Technical Skills"
+      },
+      "Digital Production": {
+        "descriptor": "Digital Production",
+        "definition": "The capacity to design, develop, adapt, or integrate hardware, software applications, electronic devices or digital technologies while adhering to cybersecurity standards.",
+        "category": "Technical Skills"
+      }
+    },
+    "Resource Management Skills": {
+      "Management of Financial Resources": {
+        "descriptor": "Management of Financial Resources",
+        "definition": "The capability to plan, organize, direct, control or monitor financial resources and activities and account for the use of theses resources to ensure their utilization are conform to the objectives and purposes.",
+        "category": "Resource Management Skills"
+      },
+      "Management of Material Resources": {
+        "descriptor": "Management of Material Resources",
+        "definition": "The capability to plan and manage the purchase, inventory, warehousing, transportation, or distribution of products or materials and their use.",
+        "category": "Resource Management Skills"
+      },
+      "Management of Personnel Resources": {
+        "descriptor": "Management of Personnel Resources",
+        "definition": "The capability to recruit, train, motivate, develop and direct employees, identify the best person for the tasks to be performed and establish their work objectives in relation to the objectives of the organization.",
+        "category": "Resource Management Skills"
+      },
+      "Operational Planning": {
+        "descriptor": "Operational Planning",
+        "definition": "The capability to determine phases and steps, define activities and tasks, and establish schedules to complete objectives on time and within budget.",
+        "category": "Resource Management Skills"
+      },
+      "Projecting Outcomes": {
+        "descriptor": "Projecting Outcomes",
+        "definition": "The capability to estimate, predict and forecast results and outcomes of an action or a series of actions based on data and indicators.",
+        "category": "Resource Management Skills"
+      },
+      "Risk Management": {
+        "descriptor": "Risk Management",
+        "definition": "The capability to identify and assess risks and determine procedures to be followed to reduce or avoid their impact.",
+        "category": "Resource Management Skills"
+      },
+      "Strategic Planning": {
+        "descriptor": "Strategic Planning",
+        "definition": "The capability set goals according to organization’s needs, to develop strategies, and action plans to achieve.",
+        "category": "Resource Management Skills"
+      },
+      "Time Management": {
+        "descriptor": "Time Management",
+        "definition": "The capability to manage one's own time and the time of others.",
+        "category": "Resource Management Skills"
+      },
+      "Monitoring": {
+        "descriptor": "Monitoring",
+        "definition": "The capability to monitor and assess the performance of yourself, other individuals or the organization to make improvements or take corrective action.",
+        "category": "Resource Management Skills"
+      },
+      "Change Management": {
+        "descriptor": "Change Management",
+        "definition": "The capability to plan and implement strategies for effecting change, communicate the effects of change, and provide guidance and support to those affected by change.",
+        "category": "Resource Management Skills"
+      },
+      "Crisis Management": {
+        "descriptor": "Crisis Management",
+        "definition": "The capability to establish a response plan for emergencies, to apply it and adapt it to situations while limiting the impact on people, customers, employees and the organisation.",
+        "category": "Resource Management Skills"
+      }
+    },
+    "Interpersonal Skills": {
+      "Coordinating": {
+        "descriptor": "Coordinating",
+        "definition": "The capability to organize people or groups by adjusting activities in relation to others' activities so that they work effectively as a whole.",
+        "category": "Interpersonal Skills"
+      },
+      "Instructing": {
+        "descriptor": "Instructing",
+        "definition": "The capability to teach others knowledge, or how to do something.",
+        "category": "Interpersonal Skills"
+      },
+      "Negotiating": {
+        "descriptor": "Negotiating",
+        "definition": "The capability to participate in, or facilitate communication between parties, in order to resolve differences, and reach a mutually acceptable or viable agreement.",
+        "category": "Interpersonal Skills"
+      },
+      "Persuading": {
+        "descriptor": "Persuading",
+        "definition": "The capability to convince others to change their minds, beliefs, intentions or behaviours.",
+        "category": "Interpersonal Skills"
+      },
+      "Social Perceptiveness": {
+        "descriptor": "Social Perceptiveness",
+        "definition": "The capability to be aware of others' reactions, unspoken communication, body language cues and feelings and discern the reasons behind their behaviours.",
+        "category": "Interpersonal Skills"
+      },
+      "Cross-Cultural Sensitivity": {
+        "descriptor": "Cross-Cultural Sensitivity",
+        "definition": "The capability to communicate, interact and work appropriately with people from different cultural backgrounds, in recognition that diversity is being both between and within cultural groups and can be expressed in customs, values, and ways of thinking and acting.",
+        "category": "Interpersonal Skills"
+      },
+      "Managing Conversation": {
+        "descriptor": "Managing Conversation",
+        "definition": "The capability to lead and facilitate dialogue between two or more people.",
+        "category": "Interpersonal Skills"
+      }
+    }
+  },
+  "KNOWLEDGE": {
+    "Administration and Management": {
+      "Accounting": {
+        "descriptor": "Accounting",
+        "definition": "Knowledge of concepts, principles, methods and practices for budgeting, storing, tracking, controlling, analyzing, and reporting on financial transactions.",
+        "category": "Administration and Management"
+      },
+      "Business Management": {
+        "descriptor": "Business Management",
+        "definition": "Knowledge of concepts, principles and practices of managing business operations such as strategic planning, resource allocation, production management, and coordination of people and activities.",
+        "category": "Administration and Management"
+      },
+      "Clerical": {
+        "descriptor": "Clerical",
+        "definition": "Knowledge of administrative concepts, principles, methods, procedures and practices for the functioning of the daily office operations.",
+        "category": "Administration and Management"
+      },
+      "Finance": {
+        "descriptor": "Finance",
+        "definition": "Knowledge of concepts, principles, methods and practices related to financial operations, systems and institutions.",
+        "category": "Administration and Management"
+      },
+      "Human Resources and Labour relations": {
+        "descriptor": "Human Resources and Labour relations",
+        "definition": "Knowledge of concepts, principles, procedures and practices for personnel recruitment, selection, hiring, training, deploying, compensation and benefits, labour relations and negotiation, and personnel information systems.",
+        "category": "Administration and Management"
+      },
+      "Sale and Marketing": {
+        "descriptor": "Sale and Marketing",
+        "definition": "Knowledge of concepts, principles, techniques, practices and tools for determining consumer behaviour and needs, developing business opportunities and promoting and selling products and services.",
+        "category": "Administration and Management"
+      },
+      "Client Service": {
+        "descriptor": "Client Service",
+        "definition": "Knowledge of concepts, principles, and practices of providing services and support to satisfy clients' requirements and needs.",
+        "category": "Administration and Management"
+      }
+    },
+    "Communication": {
+      "Communications and Media": {
+        "descriptor": "Communications and Media",
+        "definition": "Knowledge of concepts, principles, methods and techniques of creation, production, distribution or dissemination of written, oral, audiovisual or visual communications.",
+        "category": "Communication"
+      }
+    },
+    "Education": {
+      "Teaching": {
+        "descriptor": "Teaching",
+        "definition": "Knowledge of the concepts, principles, methods and practices of instructing individuals and groups, designing educational curriculum and measuring learning outcome.",
+        "category": "Education"
+      },
+      "Training, Mentoring and Coaching": {
+        "descriptor": "Training, Mentoring and Coaching",
+        "definition": "Knowledge of concepts and principles of learning and readiness to learn, and of methods for guiding, advising, directing and supporting career or personal goals for the individuals or groups to gain experience and improve competencies.",
+        "category": "Education"
+      }
+    },
+    "Health and Wellbeing": {
+      "Hospitality": {
+        "descriptor": "Hospitality",
+        "definition": "Knowledge of concepts, principles, techniques and tools or equipment for managing facilities and providing food, accommodation or tourism services with the focus on client experience.",
+        "category": "Health and Wellbeing"
+      },
+      "Mental Health": {
+        "descriptor": "Mental Health",
+        "definition": "Knowledge of concepts, principles, methods, and procedures for assessment, diagnosis, treatment, rehabilitation, counseling or guidance to address neurological and cognitive processes, behaviours, and disorders or to maintain balanced mental health and well-being.",
+        "category": "Health and Wellbeing"
+      },
+      "Personal Services": {
+        "descriptor": "Personal Services",
+        "definition": "Knowledge of concepts, principles, techniques and tools for providing services of personal nature related to body care, childcare and other in-home services.",
+        "category": "Health and Wellbeing"
+      },
+      "Physical Health": {
+        "descriptor": "Physical Health",
+        "definition": "Knowledge of concepts and principles of the human anatomy, organic systems, biomedical sciences, genetics, and of procedures, techniques and tools needed to diagnose and treat injuries and diseases, to restore and maintain physical health by the prevention and treatment.",
+        "category": "Health and Wellbeing"
+      },
+      "Recreation, Leisure and Fitness": {
+        "descriptor": "Recreation, Leisure and Fitness",
+        "definition": "Knowledge of concepts, principles, practices, and equipment for physical fitness and for managing and providing recreational, leisure and fitness program or services.",
+        "category": "Health and Wellbeing"
+      },
+      "Veterinarian and Animal Care": {
+        "descriptor": "Veterinarian and Animal Care",
+        "definition": "Knowledge of concepts, principles, practices, techniques and tools for the prevention, care, diagnostics, and treatment of diseases, disorders and injuries, and the maintenance of wellbeing of animals.",
+        "category": "Health and Wellbeing"
+      }
+    },
+    "Law, Government and Safety": {
+      "Military": {
+        "descriptor": "Military",
+        "definition": "Knowledge of organisations, structures, practices and strategies related to defence, security, intelligence and peacekeeping missions.",
+        "category": "Law, Government and Safety"
+      },
+      "Law": {
+        "descriptor": "Law",
+        "definition": "Knowledge of concepts, principles, functioning and processes of the provincial-territorial, federal or international legal systems for the establishment, implementation and application of laws, legal codes and documents, and court procedures.",
+        "category": "Law, Government and Safety"
+      },
+      "Public Affairs and Government Relations": {
+        "descriptor": "Public Affairs and Government Relations",
+        "definition": "Knowledge of concepts, principles, processes, and functioning of governments and political systems for the establishment and implementation of policies, rules, regulations, and executive orders.",
+        "category": "Law, Government and Safety"
+      },
+      "Public Safety and Security": {
+        "descriptor": "Public Safety and Security",
+        "definition": "Knowledge of concepts, principles, regulations, procedures and practices of public safety and security operations and systems for the protection of people, data and properties.",
+        "category": "Law, Government and Safety"
+      }
+    },
+    "Logistics, Design and Evaluation": {
+      "Manufacturing, Processing and Production": {
+        "descriptor": "Manufacturing, Processing and Production",
+        "definition": "Knowledge of concepts, principles, methods and techniques of production and transformation, including manual and mechanical processes.",
+        "category": "Logistics, Design and Evaluation"
+      },
+      "Logistics": {
+        "descriptor": "Logistics",
+        "definition": "Knowledge of concepts, principles, infrastructures and processes for planning, organizing and coordinating the transportation of people and animals or for the acquisition, transportation, and storage of goods and resources.",
+        "category": "Logistics, Design and Evaluation"
+      },
+      "Performance Measurement": {
+        "descriptor": "Performance Measurement",
+        "definition": "Knowledge of concepts, principles, methods, practices and strategies of monitoring the development, delivery and quality of products, programs or services.",
+        "category": "Logistics, Design and Evaluation"
+      },
+      "Technical Design": {
+        "descriptor": "Technical Design",
+        "definition": "Knowledge of technical design concepts, principles, methods, techniques, and tools involved in the creation and production of technical plans, blueprints, drawings or models.",
+        "category": "Logistics, Design and Evaluation"
+      }
+    },
+    "Natural Resources": {
+      "Agriculture and Horticulture": {
+        "descriptor": "Agriculture and Horticulture",
+        "definition": "Knowledge of concepts, principles, techniques, materials, and equipment for planting, growing, harvesting, storing or preserving plants and plant-sourced food products.",
+        "category": "Natural Resources"
+      },
+      "Forestry": {
+        "descriptor": "Forestry",
+        "definition": "Knowledge of concepts, principles, techniques, materials, and equipment for sourcing, processing, and managing harvested forestry resources, and monitoring and preserving sustainable forestry resources.",
+        "category": "Natural Resources"
+      },
+      "Geological Resources": {
+        "descriptor": "Geological Resources",
+        "definition": "Knowledge of concepts, principles, techniques, materials, and equipment for sourcing, processing, managing, monitoring or preserving mineral and metals resources.",
+        "category": "Natural Resources"
+      },
+      "Livestock, Farm Animals & Wildlife": {
+        "descriptor": "Livestock, Farm Animals & Wildlife",
+        "definition": "Knowledge of concepts, principles, techniques, materials, and equipment for sourcing, raising, fishing, hunting, managing, monitoring, or preserving stored sustainable animal resources and wildlife conservation.",
+        "category": "Natural Resources"
+      },
+      "Water Resources": {
+        "descriptor": "Water Resources",
+        "definition": "Knowledge of concepts, principles, techniques, materials, and equipment for sourcing, processing, managing, monitoring or preserving water resources such as rivers, lakes, oceans, and underground aquifers.",
+        "category": "Natural Resources"
+      }
+    },
+    "Physical Sciences": {
+      "Biology": {
+        "descriptor": "Biology",
+        "definition": "Knowledge of concepts and principles of living organisms including their structure, function, growth, origin, evolution, distribution and classification and their interdependencies and interactions with each other and the environment, as well as safe and ethical handling methods and techniques.",
+        "category": "Physical Sciences"
+      },
+      "Chemistry": {
+        "descriptor": "Chemistry",
+        "definition": "Knowledge of the composition, structure, and properties of chemical substances including their interactions, transformations and use, as well as the production techniques, risk factors, and disposal methods.",
+        "category": "Physical Sciences"
+      },
+      "Geoscience": {
+        "descriptor": "Geoscience",
+        "definition": "Knowledge of concepts, principles, methods, and techniques for understanding material quality, physical characteristics, composition, structure, and natural systems, and the evolution of earth, ocean, and atmosphere phenomena.",
+        "category": "Physical Sciences"
+      },
+      "Physics": {
+        "descriptor": "Physics",
+        "definition": "Knowledge of concepts, principles, fundamental properties, and laws that govern space, time, energy and matter and of equipment and methods required to study and apply the interactions of objects including atoms, particles and celestial bodies.",
+        "category": "Physical Sciences"
+      }
+    },
+    "Socioeconomic Systems": {
+      "Arts": {
+        "descriptor": "Arts",
+        "definition": "Knowledge of concepts, principles and techniques of artistic expression required to create, compose or produce visual, applied, performing or literary art.",
+        "category": "Socioeconomic Systems"
+      },
+      "Economics": {
+        "descriptor": "Economics",
+        "definition": "Knowledge of concepts and principles of the production, distribution, and consumption of goods and services and the methods of analysis including simulation and forecasting techniques.",
+        "category": "Socioeconomic Systems"
+      },
+      "Humanities": {
+        "descriptor": "Humanities",
+        "definition": "Knowledge of concepts, principles, methods for understanding human social interaction and structures, and events throughout time and their effects on civilizations, cultures and environment.",
+        "category": "Socioeconomic Systems"
+      },
+      "Library, Conservation, and Heritage": {
+        "descriptor": "Library, Conservation, and Heritage",
+        "definition": "Knowledge of concepts, principles, techniques, and tools in the classification, storage, retrieval, display and management of documentation and records in various media, museum artifacts or works of fine art.",
+        "category": "Socioeconomic Systems"
+      },
+      "Theology and Philosophy": {
+        "descriptor": "Theology and Philosophy",
+        "definition": "Knowledge of concepts and principles of religious and philosophical systems, and of fundamental questioning of existence, reason, values, ethics, ways of thinking, customs, practices and their impact on individuals, human culture and society.",
+        "category": "Socioeconomic Systems"
+      }
+    },
+    "Technology, Electrical, Material and Mechanical": {
+      "Building and Construction": {
+        "descriptor": "Building and Construction",
+        "definition": "Knowledge of concepts, principles, methods, materials and tools involved in the construction, maintenance and repair of houses, buildings, or infrastructures such as highways and roads.",
+        "category": "Technology, Electrical, Material and Mechanical"
+      },
+      "Computer, Technology and Information Systems": {
+        "descriptor": "Computer, Technology and Information Systems",
+        "definition": "Knowledge of concepts, principles, processes, techniques, and tools for technological and digital systems, devices and products, such as hardware or software development, assembling, programming, use, troubleshooting or maintenance.",
+        "category": "Technology, Electrical, Material and Mechanical"
+      },
+      "Electrical and Electronics": {
+        "descriptor": "Electrical and Electronics",
+        "definition": "Knowledge of concepts, principles, techniques, and tools applied for the development, use, repair and maintenance of electronic and electrical products and devices.",
+        "category": "Technology, Electrical, Material and Mechanical"
+      },
+      "Mechanics and Machinery": {
+        "descriptor": "Mechanics and Machinery",
+        "definition": "Knowledge of parts, standards, and functioning of machines, vehicles, equipment or tools, and techniques used for their repair or maintenance.",
+        "category": "Technology, Electrical, Material and Mechanical"
+      },
+      "Telecommunications": {
+        "descriptor": "Telecommunications",
+        "definition": "Knowledge of concepts, principles, processes, techniques and tools of the transmission of information via wire, radio, optical fiber or other electromagnetic system for the use, repair, maintenance, control, or operation of telecommunications systems.",
+        "category": "Technology, Electrical, Material and Mechanical"
+      },
+      "Vehicle, Machinery and Equipment Operations": {
+        "descriptor": "Vehicle, Machinery and Equipment Operations",
+        "definition": "Knowledge of the parts and functioning of vehicles, machinery or equipment, and of techniques and practices for their safe and efficient use.",
+        "category": "Technology, Electrical, Material and Mechanical"
+      }
+    },
+    "Foundational Knowledge": {
+      "Languages": {
+        "descriptor": "Languages",
+        "definition": "Knowledge of vocabulary, grammar structure and rules, spelling, and pronunciation of words in one or both official languages, Indigenous languages, and non-official languages.",
+        "category": "Foundational Knowledge"
+      },
+      "Mathematics": {
+        "descriptor": "Mathematics",
+        "definition": "Knowledge of concepts, principles, methods, and applications of arithmetic, algebra, geometry, trigonometry, differential and integral calculus, probability, and statistics.",
+        "category": "Foundational Knowledge"
+      }
+    }
+  },
+  "WORK_CONTEXT": {
+    "Structural Job Characteristics": {
+      "Consequence of Error": {
+        "descriptor": "Consequence of Error",
+        "definition": "The impact on outcomes of a mistake, which was not readily correctable, made by the worker.",
+        "category": "Structural Job Characteristics"
+      },
+      "Freedom to Make Decisions": {
+        "descriptor": "Freedom to Make Decisions",
+        "definition": "The job allows the worker to make decisions without supervision.",
+        "category": "Structural Job Characteristics"
+      },
+      "Frequency of Decision Making": {
+        "descriptor": "Frequency of Decision Making",
+        "definition": "The job requires the worker to make decisions that affect other people, the financial resources, and/or the image and reputation of the organization.",
+        "category": "Structural Job Characteristics"
+      },
+      "Impact of Decisions": {
+        "descriptor": "Impact of Decisions",
+        "definition": "The impact on the organization or colleagues of the decisions made by the worker (a decision should be understood as a conclusion or resolution reached after consideration).",
+        "category": "Structural Job Characteristics"
+      },
+      "Automation": {
+        "descriptor": "Automation",
+        "definition": "The job requires operation, manipulation or handling of automated systems, processes or machines.",
+        "category": "Structural Job Characteristics"
+      },
+      "Precision": {
+        "descriptor": "Precision",
+        "definition": "The job requires the worker to be exact or accurate.",
+        "category": "Structural Job Characteristics"
+      },
+      "Structured versus Unstructured Work": {
+        "descriptor": "Structured versus Unstructured Work",
+        "definition": "The extent to which the job is structured for the worker, rather than allowing the worker to determine tasks, priorities, and goals.",
+        "category": "Structural Job Characteristics"
+      },
+      "Tasks Repetition": {
+        "descriptor": "Tasks Repetition",
+        "definition": "The job requires repetitive tasks in the performance of work.",
+        "category": "Structural Job Characteristics"
+      },
+      "Pace Determined by Speed of Equipment": {
+        "descriptor": "Pace Determined by Speed of Equipment",
+        "definition": "The job requires maintaining pace with the speed of the equipment, machines, or computers. This does not refer to always being occupied while in the position.",
+        "category": "Structural Job Characteristics"
+      },
+      "Time Pressure": {
+        "descriptor": "Time Pressure",
+        "definition": "The job requires working under pressure, meeting strict deadlines or dealing with competing priorities.",
+        "category": "Structural Job Characteristics"
+      },
+      "Type of Work Schedules": {
+        "descriptor": "Type of Work Schedules",
+        "definition": "The type of schedule usually required for the job.",
+        "category": "Structural Job Characteristics"
+      },
+      "Work Week Duration": {
+        "descriptor": "Work Week Duration",
+        "definition": "Number of hours typically worked over a period of 7 days.",
+        "category": "Structural Job Characteristics"
+      },
+      "Competition": {
+        "descriptor": "Competition",
+        "definition": "The job requires to compete against co-workers or to be aware of competitive pressure between them or between businesses within the same industry.",
+        "category": "Structural Job Characteristics"
+      }
+    },
+    "Physical Work Environment": {
+      "Dangerous Locations": {
+        "descriptor": "Dangerous Locations",
+        "definition": "The job requires working in locations that are inherently treacherous and are potential sources of injury. Such work locations include among others, construction sites, underground sites, erected support structures, and marine environments.",
+        "category": "Physical Work Environment"
+      },
+      "Fire, Steam, Hot Surfaces": {
+        "descriptor": "Fire, Steam, Hot Surfaces",
+        "definition": "The job requires being exposed to fire (rather than being exposed to flammable substances that may ignite), to emissions of steam or to intensely hot surfaces that are potential sources of injury.",
+        "category": "Physical Work Environment"
+      },
+      "Flying Particles, Falling Objects": {
+        "descriptor": "Flying Particles, Falling Objects",
+        "definition": "The job requires being exposed to flying particles and falling objects or materials in the work environment that pose the risk of bodily injury. Flying particles refer to particles such as wood chips, metal particles, and rock chips generated by the handling, crushing, grinding, rapid impact, or explosion of materials.",
+        "category": "Physical Work Environment"
+      },
+      "Hazardous Conditions": {
+        "descriptor": "Hazardous Conditions",
+        "definition": "The job requires being exposed to conditions that involves risks of accidents such as high voltage electricity, flammable material, or explosives.",
+        "category": "Physical Work Environment"
+      },
+      "Hazardous Equipment, Machinery, Tools": {
+        "descriptor": "Hazardous Equipment, Machinery, Tools",
+        "definition": "The job requires working near or with equipment, instruments, machinery, or power/hand tools that may be a potential source of accident or injury.",
+        "category": "Physical Work Environment"
+      },
+      "High Places": {
+        "descriptor": "High Places",
+        "definition": "The job requires being exposed to elevated places such as poles, scaffolding, catwalks, or ladders longer than two meters in length.",
+        "category": "Physical Work Environment"
+      },
+      "Radiation": {
+        "descriptor": "Radiation",
+        "definition": "The job requires being exposed to ionizing radiation such as X-rays and radioactive substances or non-ionizing radiation such as radio frequencies and infrared, ultraviolet or visible light that may affect health adversely.",
+        "category": "Physical Work Environment"
+      },
+      "Cramped Work Space, Awkward Positions": {
+        "descriptor": "Cramped Work Space, Awkward Positions",
+        "definition": "The job requires working in confined space that requires getting into uncomfortable positions.",
+        "category": "Physical Work Environment"
+      },
+      "Skin Injury": {
+        "descriptor": "Skin Injury",
+        "definition": "The job requires being exposed to the risks of minor burns, cuts, bites, or stings.",
+        "category": "Physical Work Environment"
+      },
+      "In an Enclosed Vehicle or Equipment": {
+        "descriptor": "In an Enclosed Vehicle or Equipment",
+        "definition": "The job requires working in a closed vehicle or equipment (e.g., car, truck or heavy equipment).",
+        "category": "Physical Work Environment"
+      },
+      "In an Open Vehicle or Equipment": {
+        "descriptor": "In an Open Vehicle or Equipment",
+        "definition": "The job requires working in an open vehicle or equipment (e.g., tractor).",
+        "category": "Physical Work Environment"
+      },
+      "Indoors, Environmentally Controlled": {
+        "descriptor": "Indoors, Environmentally Controlled",
+        "definition": "The job requires working inside a building with controlled temperature and humidity conditions.",
+        "category": "Physical Work Environment"
+      },
+      "Indoors, Not Environmentally Controlled": {
+        "descriptor": "Indoors, Not Environmentally Controlled",
+        "definition": "The job requires working inside a building where the temperature and humidity are not controlled (e.g., warehouse without heat).",
+        "category": "Physical Work Environment"
+      },
+      "Outside, Exposed to Weather": {
+        "descriptor": "Outside, Exposed to Weather",
+        "definition": "The job requires working outdoors and being subject to variations in weather conditions and seasonal weather patterns.",
+        "category": "Physical Work Environment"
+      },
+      "Outside, Under Cover": {
+        "descriptor": "Outside, Under Cover",
+        "definition": "The job requires working outdoors, protected from variations in weather conditions and seasonal weather patterns by a covered space (e.g., structure with roof but no walls).",
+        "category": "Physical Work Environment"
+      },
+      "Physical Proximity": {
+        "descriptor": "Physical Proximity",
+        "definition": "The job requires performing tasks while being physically close to other people.",
+        "category": "Physical Work Environment"
+      },
+      "Biological Agents": {
+        "descriptor": "Biological Agents",
+        "definition": "The job requires being exposed to bacteria, viruses and fungi that may cause illness due to direct or indirect contact.",
+        "category": "Physical Work Environment"
+      },
+      "Dangerous Chemical Substances": {
+        "descriptor": "Dangerous Chemical Substances",
+        "definition": "The job requires being exposed to contaminants, such as pollutants, gases or dust, through inhalation, ingestion, or contact with skin.",
+        "category": "Physical Work Environment"
+      },
+      "Vibration": {
+        "descriptor": "Vibration",
+        "definition": "The job requires being exposed to oscillating or quivering motion of the body while performing tasks.",
+        "category": "Physical Work Environment"
+      },
+      "Sound and Noise": {
+        "descriptor": "Sound and Noise",
+        "definition": "The job requires being exposed to sound and noise levels that are distracting or uncomfortable, regardless of the equipment used by the workers.",
+        "category": "Physical Work Environment"
+      },
+      "Extremely Bright or Inadequate Lighting": {
+        "descriptor": "Extremely Bright or Inadequate Lighting",
+        "definition": "The job requires working in extremely bright or inadequate lighting conditions.",
+        "category": "Physical Work Environment"
+      },
+      "Extreme Temperatures": {
+        "descriptor": "Extreme Temperatures",
+        "definition": "The job requires being exposed to very hot (above 32.2 °C) or very cold (below 0 °C) temperatures.",
+        "category": "Physical Work Environment"
+      },
+      "Odours": {
+        "descriptor": "Odours",
+        "definition": "The job requires being exposed to noxious, intense or prolonged odours.",
+        "category": "Physical Work Environment"
+      },
+      "Specialized Safety Equipment": {
+        "descriptor": "Specialized Safety Equipment",
+        "definition": "The job requires wearing specialized protective or safety equipment such as breathing apparatus, safety harness, full protection suits, or radiation protection.",
+        "category": "Physical Work Environment"
+      },
+      "Standard Safety Equipment": {
+        "descriptor": "Standard Safety Equipment",
+        "definition": "The job requires wearing common protective or safety equipment such as safety shoes, glasses, gloves, hard hats, or life jackets.",
+        "category": "Physical Work Environment"
+      }
+    },
+    "Physical Demands": {
+      "Bending or Twisting the Body": {
+        "descriptor": "Bending or Twisting the Body",
+        "definition": "The job requires leaning forwards or backwards or moving the body torsionally.",
+        "category": "Physical Demands"
+      },
+      "Climbing": {
+        "descriptor": "Climbing",
+        "definition": "The job requires going up and down ladders, scaffolds, or poles.",
+        "category": "Physical Demands"
+      },
+      "Crawling": {
+        "descriptor": "Crawling",
+        "definition": "The job requires moving in a prone position, with the body resting on or close to the ground, on the hands and knees.",
+        "category": "Physical Demands"
+      },
+      "Crouching": {
+        "descriptor": "Crouching",
+        "definition": "The job requires powering the body stance by bending the legs.",
+        "category": "Physical Demands"
+      },
+      "Handling Material Manually": {
+        "descriptor": "Handling Material Manually",
+        "definition": "The job requires using your hands to handle, control, or feel objects, tools, or controls (excluding mouse and keyboard).",
+        "category": "Physical Demands"
+      },
+      "Keeping or Regaining Balance": {
+        "descriptor": "Keeping or Regaining Balance",
+        "definition": "The job requires maintaining your body in a steady position or recovering balance.",
+        "category": "Physical Demands"
+      },
+      "Kneeling": {
+        "descriptor": "Kneeling",
+        "definition": "The job requires positioning the body so that one or both knees rest on the floor.",
+        "category": "Physical Demands"
+      },
+      "Making Repetitive Motions": {
+        "descriptor": "Making Repetitive Motions",
+        "definition": "The job requires repeating the same movement.",
+        "category": "Physical Demands"
+      },
+      "Sitting": {
+        "descriptor": "Sitting",
+        "definition": "The job requires being in a position where the body weight is supported by the buttocks.",
+        "category": "Physical Demands"
+      },
+      "Standing": {
+        "descriptor": "Standing",
+        "definition": "The job requires maintaining an upright position supported by one’s feet.",
+        "category": "Physical Demands"
+      },
+      "Walking and Running": {
+        "descriptor": "Walking and Running",
+        "definition": "The job requires lifting and setting down each foot in turn in order to move forward at a certain pace.",
+        "category": "Physical Demands"
+      },
+      "Reaching": {
+        "descriptor": "Reaching",
+        "definition": "The job requires extending one or both arms to grasp or touch a person or an object.",
+        "category": "Physical Demands"
+      },
+      "Stooping": {
+        "descriptor": "Stooping",
+        "definition": "The job requires standing or walking with an inclination of the head, body, or shoulders.",
+        "category": "Physical Demands"
+      },
+      "Keyboarding": {
+        "descriptor": "Keyboarding",
+        "definition": "The job requires using a panel of keys for typing on an electronic device or computer.",
+        "category": "Physical Demands"
+      },
+      "Carrying": {
+        "descriptor": "Carrying",
+        "definition": "The job requires holding things while moving.",
+        "category": "Physical Demands"
+      },
+      "Lifting": {
+        "descriptor": "Lifting",
+        "definition": "The job requires raising an object using the hands and arms.",
+        "category": "Physical Demands"
+      },
+      "Pulling": {
+        "descriptor": "Pulling",
+        "definition": "The job requires taking hold of an object to move it toward oneself.",
+        "category": "Physical Demands"
+      },
+      "Pushing": {
+        "descriptor": "Pushing",
+        "definition": "The job requires exerting force in order to move an object forward.",
+        "category": "Physical Demands"
+      },
+      "Speaking": {
+        "descriptor": "Speaking",
+        "definition": "The job requires conveying information in spoken language.",
+        "category": "Physical Demands"
+      },
+      "Visual Acuity": {
+        "descriptor": "Visual Acuity",
+        "definition": "The job requires distinguishing fine details in things or in the environment.",
+        "category": "Physical Demands"
+      }
+    },
+    "Interpersonal Relations": {
+      "Conflict Situations": {
+        "descriptor": "Conflict Situations",
+        "definition": "The job requires being confronted with disputes or disagreements with or between customers, employees, or other parties.",
+        "category": "Interpersonal Relations"
+      },
+      "Contact with Others": {
+        "descriptor": "Contact with Others",
+        "definition": "The job requires being in contact with others (face-to-face, by telephone, or otherwise) to perform tasks.",
+        "category": "Interpersonal Relations"
+      },
+      "Coordinating or Leading Others": {
+        "descriptor": "Coordinating or Leading Others",
+        "definition": "The job requires providing guidance or direction to co-workers or subordinates in accomplishing work activities.",
+        "category": "Interpersonal Relations"
+      },
+      "Deal With External Customers": {
+        "descriptor": "Deal With External Customers",
+        "definition": "The job requires working with members outside of the organization, including clients and the public.",
+        "category": "Interpersonal Relations"
+      },
+      "Work with Work Group or Team": {
+        "descriptor": "Work with Work Group or Team",
+        "definition": "The job requires working with others in a group or team.",
+        "category": "Interpersonal Relations"
+      },
+      "Deal with Physically Aggressive People": {
+        "descriptor": "Deal with Physically Aggressive People",
+        "definition": "The job requires dealing with individuals that have violent behaviour.",
+        "category": "Interpersonal Relations"
+      },
+      "Dealing With Unpleasant or Angry People": {
+        "descriptor": "Dealing With Unpleasant or Angry People",
+        "definition": "The job requires dealing with disagreeable, furious, or discourteous individuals.",
+        "category": "Interpersonal Relations"
+      },
+      "Electronic Mail": {
+        "descriptor": "Electronic Mail",
+        "definition": "The job requires the use of an electronic communication device to send and receive messages.",
+        "category": "Interpersonal Relations"
+      },
+      "Face-to-Face Discussions": {
+        "descriptor": "Face-to-Face Discussions",
+        "definition": "The job requires having in-person discussions with individuals or teams.",
+        "category": "Interpersonal Relations"
+      },
+      "Written Communications": {
+        "descriptor": "Written Communications",
+        "definition": "The job requires producing administrative or creative written communications.",
+        "category": "Interpersonal Relations"
+      },
+      "Public Speaking": {
+        "descriptor": "Public Speaking",
+        "definition": "The job requires delivering speeches to an audience (a minimum of five persons).",
+        "category": "Interpersonal Relations"
+      },
+      "Telephone": {
+        "descriptor": "Telephone",
+        "definition": "The job requires communicating with others by using a telephone or hand-held radios.",
+        "category": "Interpersonal Relations"
+      },
+      "Videoconference": {
+        "descriptor": "Videoconference",
+        "definition": "The job requires using videoconference software to participate in meetings and conversations.",
+        "category": "Interpersonal Relations"
+      },
+      "Responsibility for Outcomes and Results of Other Workers": {
+        "descriptor": "Responsibility for Outcomes and Results of Other Workers",
+        "definition": "The job requires assuming the responsibility for the end product and effects of other workers’ work.",
+        "category": "Interpersonal Relations"
+      },
+      "Responsible for Others' Health and Safety": {
+        "descriptor": "Responsible for Others' Health and Safety",
+        "definition": "The job requires ensuring the health, safety and security of others.",
+        "category": "Interpersonal Relations"
+      }
+    }
+  },
+  "WORK_ACTIVITIES": {
+    "Information-Oriented Activities": {
+      "Getting Information": {
+        "descriptor": "Getting Information",
+        "definition": "Observing, receiving, or obtaining information from all relevant sources.",
+        "category": "Information-Oriented Activities"
+      },
+      "Monitoring Processes, Materials, or Surroundings": {
+        "descriptor": "Monitoring Processes, Materials, or Surroundings",
+        "definition": "Tracking and reviewing information from materials, events, or the environment to detect or assess problems and progress.",
+        "category": "Information-Oriented Activities"
+      },
+      "Document Use": {
+        "descriptor": "Document Use",
+        "definition": "Reading, understanding, retaining, and using relevant information from texts, numbers, symbols, graphics, and images in electronic or paper format.",
+        "category": "Information-Oriented Activities"
+      },
+      "Information Synthesis": {
+        "descriptor": "Information Synthesis",
+        "definition": "Gather information from multiple sources into a coherent whole and summarize it.",
+        "category": "Information-Oriented Activities"
+      },
+      "Comparing": {
+        "descriptor": "Comparing",
+        "definition": "Determining the functional or structural characteristics of data, people, or things by finding similarities and differences from a model or established standards.",
+        "category": "Information-Oriented Activities"
+      },
+      "Analyzing Data or Information": {
+        "descriptor": "Analyzing Data or Information",
+        "definition": "Identifying the underlying principles, reasons, or facts of information by breaking down information or data into separate parts.",
+        "category": "Information-Oriented Activities"
+      },
+      "Developing Technical Instructions": {
+        "descriptor": "Developing Technical Instructions",
+        "definition": "Providing documentation, detailed instructions, drawings, or specifications to tell others about how devices, parts, equipment, or structures are to be fabricated, constructed, assembled, modified, maintained, or used.",
+        "category": "Information-Oriented Activities"
+      },
+      "Clerical Activities Clerical Activities": {
+        "descriptor": "Clerical Activities Clerical Activities",
+        "definition": "Entering, transcribing, recording, storing, or maintaining all types of information in written or electronic form.",
+        "category": "Information-Oriented Activities"
+      },
+      "Identifying Objects, Actions, and Events": {
+        "descriptor": "Identifying Objects, Actions, and Events",
+        "definition": "Identifying information by categorizing, recognizing differences or similarities, measuring, investigating, and detecting changes in circumstances or events.",
+        "category": "Information-Oriented Activities"
+      },
+      "Estimating the Quantifiable Characteristics": {
+        "descriptor": "Estimating the Quantifiable Characteristics",
+        "definition": "Estimating cost, resources or materials needed to perform a work activity.",
+        "category": "Information-Oriented Activities"
+      },
+      "Inspecting Equipment, Structures, or Material": {
+        "descriptor": "Inspecting Equipment, Structures, or Material",
+        "definition": "Inspecting equipment, structures, or material to identify the cause of errors, problems or defects.",
+        "category": "Information-Oriented Activities"
+      },
+      "Processing Information": {
+        "descriptor": "Processing Information",
+        "definition": "Compiling, categorizing, tabulating, auditing, or verifying information or data.",
+        "category": "Information-Oriented Activities"
+      }
+    },
+    "Physically-Oriented Activities": {
+      "Handling and Moving Objects": {
+        "descriptor": "Handling and Moving Objects",
+        "definition": "Using hands and arms to install, fabricate and, repair objects; or to move or manipulate objects and materials (excluding construction occupations).",
+        "category": "Physically-Oriented Activities"
+      },
+      "Operating Vehicles, Mechanized Devices, or Equipment": {
+        "descriptor": "Operating Vehicles, Mechanized Devices, or Equipment",
+        "definition": "Manoeuvring, navigating, or driving vehicles or mechanized equipment, such as forklifts, passenger vehicles, aircraft, or watercraft.",
+        "category": "Physically-Oriented Activities"
+      },
+      "Constructing": {
+        "descriptor": "Constructing",
+        "definition": "Joining building materials into a structure, applying interior or exterior finishes or installing building systems according to specifications and plans.",
+        "category": "Physically-Oriented Activities"
+      },
+      "Controlling Machines and Processes": {
+        "descriptor": "Controlling Machines and Processes",
+        "definition": "Using mechanisms or physical activity to control the operation of machines or processes (excluding computers or vehicles).",
+        "category": "Physically-Oriented Activities"
+      },
+      "Manipulating - Operating": {
+        "descriptor": "Manipulating - Operating",
+        "definition": "Using hand-held and power tools or special devices to move, remove, guide, install and place objects or materials.",
+        "category": "Physically-Oriented Activities"
+      },
+      "Sorting": {
+        "descriptor": "Sorting",
+        "definition": "Handling, retrieving, sorting, separating, or arranging materials or information, according to established patterns or procedures.",
+        "category": "Physically-Oriented Activities"
+      },
+      "Catering": {
+        "descriptor": "Catering",
+        "definition": "Preparing or cooking food and beverage by combining ingredients.",
+        "category": "Physically-Oriented Activities"
+      },
+      "Performing Janitorial Services": {
+        "descriptor": "Performing Janitorial Services",
+        "definition": "Cleaning and maintaining commercial, public, or private places.",
+        "category": "Physically-Oriented Activities"
+      },
+      "Performing General Physical Activities": {
+        "descriptor": "Performing General Physical Activities",
+        "definition": "Performing physical activities that require use of your arms and legs and moving your whole body, such as climbing, lifting, balancing, walking, stooping, and handling materials.",
+        "category": "Physically-Oriented Activities"
+      },
+      "Debugging and Reprogramming": {
+        "descriptor": "Debugging and Reprogramming",
+        "definition": "Modifying systems through upgrading, amending procedures, or correcting faults.",
+        "category": "Physically-Oriented Activities"
+      },
+      "Artistic Designing": {
+        "descriptor": "Artistic Designing",
+        "definition": "Creating and designing artistic drawing and visual representation, and arranging displays, exhibits or decorations.",
+        "category": "Physically-Oriented Activities"
+      },
+      "Electronic Maintenance": {
+        "descriptor": "Electronic Maintenance",
+        "definition": "Servicing, repairing, calibrating, regulating, fine-tuning, or testing machines, devices, and equipment that operate on electrical or electronic principles.",
+        "category": "Physically-Oriented Activities"
+      },
+      "Interacting with Computers": {
+        "descriptor": "Interacting with Computers",
+        "definition": "Using computers and computer systems (including hardware and software), and equipment with digital interface to program, write software, set up functions, enter data, process information, or control machines.",
+        "category": "Physically-Oriented Activities"
+      },
+      "Mechanical Maintenance": {
+        "descriptor": "Mechanical Maintenance",
+        "definition": "Servicing, repairing, adjusting, or testing machines, devices, moving parts, and equipment that operate on mechanical principles.",
+        "category": "Physically-Oriented Activities"
+      },
+      "Writing or Composing": {
+        "descriptor": "Writing or Composing",
+        "definition": "Writing or composing original material using symbols such as letters of the alphabet or musical notation to communicate thoughts and ideas in a readable or audible form.",
+        "category": "Physically-Oriented Activities"
+      }
+    },
+    "Mental Process-Oriented Activities": {
+      "Judging Quality": {
+        "descriptor": "Judging Quality",
+        "definition": "Assessing the value, importance or quality of materials, products, services or people.",
+        "category": "Mental Process-Oriented Activities"
+      },
+      "Evaluating Information to Determine Compliance": {
+        "descriptor": "Evaluating Information to Determine Compliance",
+        "definition": "Using relevant information and individual judgment to determine whether events or processes comply with laws, regulations or standards.",
+        "category": "Mental Process-Oriented Activities"
+      },
+      "Calculating": {
+        "descriptor": "Calculating",
+        "definition": "Performing, interpreting, and reporting mathematical operations as part of work tasks.",
+        "category": "Mental Process-Oriented Activities"
+      },
+      "Making Decisions": {
+        "descriptor": "Making Decisions",
+        "definition": "Choose the best solution based on the analysis of information and the evaluation of potential results.",
+        "category": "Mental Process-Oriented Activities"
+      },
+      "Thinking Creatively": {
+        "descriptor": "Thinking Creatively",
+        "definition": "Generating innovative or creative ideas to develop or design new application, products, including artistic contributions.",
+        "category": "Mental Process-Oriented Activities"
+      },
+      "Developing Objectives and Strategies": {
+        "descriptor": "Developing Objectives and Strategies",
+        "definition": "Define and establish medium to long-term objectives, and determine strategies and actions to achieve them.",
+        "category": "Mental Process-Oriented Activities"
+      },
+      "Applying New Knowledge": {
+        "descriptor": "Applying New Knowledge",
+        "definition": "Keep up-to-date on relevant theorical and technical knowledge and apply them at work.",
+        "category": "Mental Process-Oriented Activities"
+      },
+      "Examining and Diagnosing": {
+        "descriptor": "Examining and Diagnosing",
+        "definition": "Assessing the human, animal, technical, or scientific dimensions of a problem through examination or diagnostic testing in order to determine its root cause and appropriate intervention (excluding all forms of interviews).",
+        "category": "Mental Process-Oriented Activities"
+      },
+      "Managing Resources": {
+        "descriptor": "Managing Resources",
+        "definition": "Determining, acquiring, monitoring and controlling any kind of resources and overseeing the spending of money.",
+        "category": "Mental Process-Oriented Activities"
+      },
+      "Planning and Organizing": {
+        "descriptor": "Planning and Organizing",
+        "definition": "Developing specific goals and plans to prioritize and organize tasks to get the work done.",
+        "category": "Mental Process-Oriented Activities"
+      },
+      "Scheduling Work and Activities": {
+        "descriptor": "Scheduling Work and Activities",
+        "definition": "Scheduling events, programs, and activities, as well as the work of others.",
+        "category": "Mental Process-Oriented Activities"
+      }
+    },
+    "People-Oriented Activities": {
+      "Communicating with Coworkers": {
+        "descriptor": "Communicating with Coworkers",
+        "definition": "Sharing or providing information or advice to management, supervisors, co-workers and subordinates on work related topics.",
+        "category": "People-Oriented Activities"
+      },
+      "Coordinating the Work and Activities of Others": {
+        "descriptor": "Coordinating the Work and Activities of Others",
+        "definition": "Getting members of a group to work together to accomplish tasks.",
+        "category": "People-Oriented Activities"
+      },
+      "Facilitating Group Discussion": {
+        "descriptor": "Facilitating Group Discussion",
+        "definition": "Encouraging exchanges by facilitating participation in group interviews and discussions to improve dialogue, decision making or problem solving.",
+        "category": "People-Oriented Activities"
+      },
+      "Interpreting the Meaning of Information for Others": {
+        "descriptor": "Interpreting the Meaning of Information for Others",
+        "definition": "Translating or explaining what information means and how it can be used.",
+        "category": "People-Oriented Activities"
+      },
+      "Protecting and Enforcing": {
+        "descriptor": "Protecting and Enforcing",
+        "definition": "Responding to public safety, security and cybersecurity needs, and promoting and ensuring compliance to rules, standards or laws to protect the general population from all kinds of significant danger (excluding medical treatments).",
+        "category": "People-Oriented Activities"
+      },
+      "Communicating with Persons Outside Organization": {
+        "descriptor": "Communicating with Persons Outside Organization",
+        "definition": "Sharing or exchanging information with people outside the organization, representing the organization to customers, the public, government or other external sources.",
+        "category": "People-Oriented Activities"
+      },
+      "Establishing and Maintaining Interpersonal Relationships": {
+        "descriptor": "Establishing and Maintaining Interpersonal Relationships",
+        "definition": "Developing respectful, constructive, and cooperative working relationships with others, and maintaining them over time.",
+        "category": "People-Oriented Activities"
+      },
+      "Selling or Influencing Others": {
+        "descriptor": "Selling or Influencing Others",
+        "definition": "Convincing others to buy goods or services, or to change their minds or actions.",
+        "category": "People-Oriented Activities"
+      },
+      "Performing for or Working Directly with the Public": {
+        "descriptor": "Performing for or Working Directly with the Public",
+        "definition": "Working or interacting directly with the public or performing for public audiences.",
+        "category": "People-Oriented Activities"
+    },
+      "Interviewing": {
+        "descriptor": "Interviewing",
+        "definition": "Conduct formal interviews with individual or group to collect information or opinions (excluding interviews for the purpose of staffing or recruitment).",
+        "category": "People-Oriented Activities"
+      },
+      "Assisting and Caring for Others": {
+        "descriptor": "Assisting and Caring for Others",
+        "definition": "Providing personal assistance, medical attention, emotional support, or other care to customers, clients, or patients.",
+        "category": "People-Oriented Activities"
+      },
+      "Coaching and Developing Others": {
+        "descriptor": "Coaching and Developing Others",
+        "definition": "Identifying the developmental needs of others and coaching, mentoring, or otherwise helping others to improve their knowledge or skills.",
+        "category": "People-Oriented Activities"
+      },
+      "Providing Consultation and Advice": {
+        "descriptor": "Providing Consultation and Advice",
+        "definition": "Providing guidance and expert advice to management or other groups on technical, systems, or process related topics.",
+        "category": "People-Oriented Activities"
+      },
+      "Resolving Conflicts and Negotiating with Others": {
+        "descriptor": "Resolving Conflicts and Negotiating with Others",
+        "definition": "Handling complaints, settling disputes, and resolving grievances and conflicts, or otherwise negotiating with others.",
+        "category": "People-Oriented Activities"
+      },
+      "Supervising Subordinates": {
+        "descriptor": "Supervising Subordinates",
+        "definition": "Provide guidance and direction to subordinates, including the establishment of work outcomes for performance monitoring.",
+        "category": "People-Oriented Activities"
+      },
+      "Team Building": {
+        "descriptor": "Team Building",
+        "definition": "Encouraging and building mutual trust, respect, and cooperation among team members.",
+        "category": "People-Oriented Activities"
+      },
+      "Training and Teaching": {
+        "descriptor": "Training and Teaching",
+        "definition": "Identifying the educational needs of others, developing formal educational or training programs or classes, and teaching or instructing others.",
+        "category": "People-Oriented Activities"
+      },
+      "Staffing": {
+        "descriptor": "Staffing",
+        "definition": "Recruiting, interviewing, selecting, hiring, and promoting employees in an organization (excluding non-recruitment interviews).",
+        "category": "People-Oriented Activities"
+      }
+    }
+  }
+}

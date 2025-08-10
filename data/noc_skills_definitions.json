@@ -1,0 +1,18 @@
+{
+  "introduction": {
+    "title": "Skills and Competencies Taxonomy",
+    "text": "In order to complement other federal, provincial, and territorial employment programs involving skills identification and utilization, Employment and Social Development Canada (ESDC) has developed a Skills and Competencies Taxonomy, which is helping to facilitate a Pan-Canadian dialogue on competencies.\n\nThe Taxonomy streamlines the terminology of hundreds of occupational descriptors used in the labour market. Each descriptor is associated with one of the eight main categories (skills, abilities, personal attributes, knowledge, interests, work context, work activities, and tools and technologies), which are then further divided into sub-categories. The Taxonomy improves the comparability of concepts and their application throughout occupations and sectors.\n\nThe Taxonomy was constructed based on internal products (e.g., Career Handbook, Skills and Knowledge Checklist, and Essential Skills profiles), the American O*NET system, and a variety of national and international competency-based frameworks.\n\nThe Skills and Competencies Taxonomy is an evergreen product. ESDC continues to consult with internal and external stakeholders to validate and improve its content.\n\nThe Essential Skills, a product of EDSC-Office of Literacy and Essential Skills, was incorporated in the first publication of the Taxonomy in July 2019. Since then, a new model named Skills for Success was developed and launched in May 2021 by ESDC-Office of Skills for Success.",
+    "note": "In the field of competencies, there is a debate among English speakers about the use of the terms 'skills' and 'competencies'. According to the literature, there is a nuance between the two, namely that competencies presume the use of skills, as well as personal abilities and attributes to perform a task or respond to a request. However, with this clarification, we recognize that the title of the Taxonomy is not accurate because its content also includes work activities, work context, and tools and technologies used."
+  },
+  "search_tool_URL": "https://noc.esdc.gc.ca/",
+  "definitions": {
+    "Competencies": "The combined utilization of personal attributes, abilities, skills, and knowledge to effectively perform a job, role, function, task, or duty.",
+    "Competencies Source": "Adapted from the International Society for Performance Improvement, and the Organization for Economic Co-operation and Development",
+    "Skills": "Developed capabilities that an individual must have to be effective in a job, role, function, task, or duty.",
+    "Skills Source": "Adapted from the U.S. O*NET definition of Skills",
+    "Abilities": "Innate and developed aptitudes that facilitate the acquisition of knowledge and skills to carry out expected work.",
+    "Personal Attributes": "Personal characteristics that are innate and developed through the social context and personal experiences to which the individual is exposed. These qualities influence the way one is and does things and are considered to be valuable assets for work performance."
+  },
+  "SOURCE": "https://noc.esdc.gc.ca/SkillsTaxonomy/SkillsTaxonomyWelcome"
+  
+}
