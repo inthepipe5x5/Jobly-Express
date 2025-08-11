@@ -9,14 +9,18 @@ dns.setDefaultResultOrder('ipv4first');
 
 // Use connection pooling with Supabase pooler
 const db = new Pool({
-  // Use Supabase transaction pooler first, then session pooler, then direct connection
-  connectionString: process.env.DB_TRANSACTION_POOLER_URI || process.env.DB_SESSION_POOLER_URI || process.env.DATABASE_URI || getDatabaseUri(),
-  ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
-  max: 10, // maximum number of clients in the pool (reduced for pooled connection)
-  min: 2, // minimum number of clients in the pool
-  idleTimeoutMillis: 10000, // close idle clients after 10 seconds (shorter for pooled)
-  connectionTimeoutMillis: 5000, // return an error after 5 seconds if connection could not be established
-  acquireTimeoutMillis: 5000, // timeout for acquiring a connection from pool
+  // Use Supabase session pooler first (better for persistent connections)
+  connectionString: process.env.DB_SESSION_POOLER_URI || process.env.DB_TRANSACTION_POOLER_URI || process.env.DATABASE_URI || getDatabaseUri(),
+  ssl: process.env.NODE_ENV === "production" ? { 
+    rejectUnauthorized: false,
+    sslmode: 'require'
+  } : false,
+  max: 5, // maximum number of clients in the pool (reduced for pooled connection)
+  min: 1, // minimum number of clients in the pool
+  idleTimeoutMillis: 30000, // close idle clients after 30 seconds
+  connectionTimeoutMillis: 10000, // return an error after 10 seconds if connection could not be established
+  acquireTimeoutMillis: 10000, // timeout for acquiring a connection from pool
+  statement_timeout: 30000, // 30 second statement timeout
 });
 
 // Pools manage their own connections - no need to call connect()
