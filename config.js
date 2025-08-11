@@ -2,12 +2,16 @@
 
 /** Shared config for application; can be required many places. */
 
-require("dotenv").config();
+require("dotenv").config({
+  path: ".env.production"
+});
 require("colors");
+
+
 
 const SECRET_KEY = process.env.SECRET_KEY || "secret-dev";
 
-const PORT = +process.env.PORT || 3001;
+const PORT = +process.env.PORT;
 const HOST = +process.env.HOST || "127.0.0.1";
 const DB_NAME = process.env.DB_NAME || "jobly";
 // If DB_NAME is not set, it will default to "jobly" for production and "jobly_test" for testing
@@ -15,9 +19,8 @@ const DB_NAME = process.env.DB_NAME || "jobly";
 // Database connection details
 const DB_HOST = process.env.DB_HOST || HOST;
 const DB_PORT = process.env.DB_PORT || 5432
-const DB_USERNAME = process.env.DATABASE_USERNAME
-const DB_PW = process.env.DATABASE_PW
-console.log(DB_USERNAME, DB_PW)
+const DB_USERNAME = process.env.DB_USERNAME || process.env.DATABASE_USERNAME
+const DB_PW = process.env.DB_PW || process.env.DATABASE_PW
 // Use dev database, testing database, or via env var, production database
 const buildPostgresUri = ({ user, password, host, port, database }) => {
   const auth = user
@@ -30,7 +33,7 @@ const buildPostgresUri = ({ user, password, host, port, database }) => {
 
 const getDatabaseUri = () => {
   switch (process.env.NODE_ENV) {
-    case "prduction":
+    case "production":
       return process.env.DATABASE_URI ||
         buildPostgresUri({
           user: DB_USERNAME,
@@ -47,16 +50,16 @@ const getDatabaseUri = () => {
           password: DB_PW,
           host: DB_HOST,
           port: DB_PORT,
-          database: DB_NAME ?? "jobly_test"
+          database: DB_NAME ? `${DB_NAME}_test` : "jobly_test"
         });
     default:
       return process.env.DATABASE_URI ||
         buildPostgresUri({
-          user: DB_USERNAME ?? "postgres",
-          password: DB_PW ?? "stringpassword",
-          host: DB_HOST ?? "localhost",
-          port: DB_PORT ?? 5432,
-          database: DB_NAME ?? "jobly"
+          user: DB_USERNAME || "postgres",
+          password: DB_PW || "stringpassword",
+          host: DB_HOST || "localhost",
+          port: DB_PORT || 5432,
+          database: DB_NAME || "jobly"
         });
   }
 };
@@ -66,17 +69,24 @@ const getDatabaseUri = () => {
 // WJB: Evaluate in 2021 if this should be increased to 13 for non-test use
 const BCRYPT_WORK_FACTOR = process.env.NODE_ENV === "test" ? 1 : 12;
 
+const dbConfig = Object.entries(process.env).filter(([k, v]) => k.startsWith("DB_")).reduce((acc, [k, v]) => {
+  acc[k] = v;
+  return acc;
+}, {});
+
+console.log("---------------------------------".blue);
 console.log("Jobly Config:".green);
 console.log("NODE_ENV:".green, process.env.NODE_ENV)
 console.log("SECRET_KEY:".yellow, SECRET_KEY);
 console.log("PORT:".yellow, PORT.toString());
 console.log("BCRYPT_WORK_FACTOR".yellow, BCRYPT_WORK_FACTOR);
 console.log("Database:".yellow, getDatabaseUri());
-console.log("---");
+console.log("---------------------------------".blue);
 
 module.exports = {
   SECRET_KEY,
   PORT,
   BCRYPT_WORK_FACTOR,
   getDatabaseUri,
+  dbConfig
 };
